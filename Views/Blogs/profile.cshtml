@@ -1,0 +1,246 @@
+﻿
+@{
+    ViewData["Title"] = "profile";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+
+
+
+<style>
+    .wd {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .divdown {
+        width: 100%;
+        padding: 10px;
+    }
+</style>
+
+
+<section id="prifile" class="section">
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            <div class="title text-center wow fadeInDown">
+                <h2>معلومات <span class="color">الصفحة</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+            <div class="service-block text-center wow fadeInUp" style="background-color:#171a1d; width:70%; padding-right:10%; margin:0 auto;">
+
+                <div class="price-title text-right" style="background-color:#171a1d">
+                    <h3> الأسم / محسن كاظم عبد الحسن </h3>
+                    <br />
+                    <div class="con-info clearfix text-right" style="float:none;">
+                        <span style="float:none;">بغداد , الحرية , الدولعي</span>
+                        <i class="tf-map-pin" style="float:none;"></i>
+                    </div>
+                    <div class="con-info clearfix text-right" style="float:none;">
+                        <span style="float:none;">07505496065 /رقم الهاتف </span>
+                        <i class="tf-ion-ios-telephone-outline" style="float:none;"></i>
+                    </div>
+                    <div class="con-info clearfix text-right" style="float:none;">
+                        <span style="float:none;">mohsenkadm123@gmail.com / ايميل </span>
+                        <i class="tf-ion-ios-email-outline" style="float:none;"></i>
+                    </div>
+                    <div class="con-info clearfix text-right" style="float:none;">
+                        <span style="float:none;">عدد المنشورات / 5 </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section> <!-- end section -->
+<!-- end Contact Area
+        ========================================== -->
+
+<section id="create_posts" class="section-bg">
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            <div class="title text-center wow fadeInDown">
+                <h2>انشاء <span class="color">منشور </span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+            <div class="text-center wow fadeInDown">
+
+                <a class="btn btn-main" asp-controller="Blogs" asp-action="posts" style="margin-bottom:2%;">انشاء منشور</a>
+
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section> <!-- end section -->
+<!-- end Contact Area
+        ========================================== -->
+<section id="blog" class="section">
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            <div class="title text-center wow fadeInDown">
+                <h2>أخر <span class="color">المنشورات</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+            <div class="clearfix">
+
+                <article class="wd   wow fadeInUp" data-wow-duration="500ms"
+                         data-wow-delay="400ms">
+                    <div class="post-block">
+
+                        <div class="content" style="">
+                            <div class="price-title text-right">
+
+                                <h3>سيارة اكسنت </h3>
+                                <span style="float:none;"> 2020/3/3  تاريخ النشر  </span>
+                                <p><strong class="value">$70</strong>/ السعر</p>
+                                <p><strong class="value">2008</strong>/الموديل</p>
+                                <p>الشركة \ هونداي</p>
+                                <div class="con-info clearfix text-right" style="float:none;">
+                                    <span style="float:none;">بغداد , الحرية , الدولعي</span>
+                                    <i class="tf-map-pin" style="float:none;"></i>
+                                </div>
+                                <div class="con-info clearfix text-right" style="float:none;">
+                                    <span style="float:none;">07505496065 /رقم الهاتف </span>
+                                    <i class="tf-ion-ios-telephone-outline" style="float:none;"></i>
+                                </div>
+                            </div>
+                            <p class=" text-right">
+                                سيارة اكسنت فول مواصفات  2017 بيها طخه من جهه السائق ومبدله دعاميه للتواصل  على رقم  موبايل
+                            </p>
+
+
+                            @*<a class="btn btn-transparent"> <i class="tf-ion-thumbsup"></i> اعجبني</a>*@
+
+                        </div>
+                        <div class="filtr-item ">
+                            <div class="portfolio-block" style="margin-bottom:0;">
+                                <img class="img-responsive" src="images/team/accent.jpg" style="width:100%; " alt="">
+
+                                <div class="caption">
+                                    <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/team/accent.jpg"
+                                       data-lightbox="image-1">
+                                        <i class="tf-ion-android-search"></i>
+                                    </a>
+                                    <h4>تكبير الصورة</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divdown">
+                            <span data-toggle="modal" data-target="#likemodel" style="float: right; cursor:pointer;"><a class="value1">1000</a> اعجابات </span>
+                            <span data-toggle="modal" data-target="#commentmodel" style=" cursor:pointer;"> <a class="value1">200</a> تعليقات </span>
+
+                        </div>
+                        <button class="btn btn-transparent" style=" width: 50%;"> <i class="tf-ion-ios-trash-outline "></i>  حذف المنشور  </> </button>
+                        <button class="btn btn-transparent" style=" float: right; width: 50%;"> <i class="tf-pencil2"></i> تعديل المنشور  </button>
+
+                    </div>
+                </article>
+                <!-- end single blog post -->
+            </div>
+
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section> <!-- end section -->
+<!-- end Contact Area
+        ========================================== -->
+<!-- Modal -->
+<div class="modal fade" id="commentmodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #353b43;">
+            <div class="modal-header">
+                <div class="clearfix">
+                    <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size:155%">&times;</span>
+                    </button>
+                    <h3 class="modal-title text-right" id="staticBackdropLabel">التعليقات</h3>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="pre-scrollable">
+                    <div class="price-title text-right">
+                        <h3>محسن كاظم عبد الحسن </h3>
+                        <span style="float:none;"> 2020/3/3 / تاريخ النشر التعليق  </span>
+                    </div>
+                    <p style="padding: 1%;background-color:#292F36;" class=" text-right">
+                        سيارة طيبة فول مواصفات  2017 بيها طخه من جهه السائق ومبدله دعاميه للتواصل  على رقم  موبايل
+                    </p>
+                    <div class="price-title text-right">
+                        <br />
+                        <h3>محسن كاظم عبد الحسن </h3>
+                        <span style="float:none;"> 2020/3/3 / تاريخ النشر التعليق  </span>
+                    </div>
+                    <p style="padding: 1%;background-color:#292F36;" class=" text-right">
+                        سيارة طيبة فول مواصفات  2017 بيها طخه من جهه السائق ومبدله دعاميه للتواصل  على رقم  موبايل
+                    </p>
+                    <div class="price-title text-right">
+                        <br />
+                        <h3>محسن كاظم عبد الحسن </h3>
+                        <span style="float:none;"> 2020/3/3 / تاريخ النشر التعليق  </span>
+                    </div>
+                    <p style="padding: 1%;background-color:#292F36;" class=" text-right">
+                        سيارة طيبة فول مواصفات  2017 بيها طخه من جهه السائق ومبدله دعاميه للتواصل  على رقم  موبايل
+                    </p>
+
+                </div>
+                <br />
+                <div class="form-group">
+                    <input placeholder="اكتب تعليقك" class="bo form-control text-right" autocomplete="off" name="commend" id="commend" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
+                <input type="submit" id="commend_btn" class="btn btn-transparent" value="نشر" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="likemodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #353b43;">
+            <div class="modal-header">
+                <div class="clearfix">
+                    <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-size:155%">&times;</span>
+                    </button>
+                    <h3 class="modal-title text-right" id="staticBackdropLabel">الاعجابات</h3>
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <div class="pre-scrollable">
+                    <div class="price-title text-right">
+                        <h3>محسن كاظم عبد الحسن </h3>
+                        <span style="float:none;"> 2020/3/3 / تاريخ الاعجاب  </span>
+                    </div>
+
+                    <div class="price-title text-right">
+                        <br />
+                        <h3>محسن كاظم عبد الحسن </h3>
+                        <span style="float:none;"> 2020/3/3 / تاريخ الاعجاب  </span>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section  script{
+<script>
+
+</script>
+ }

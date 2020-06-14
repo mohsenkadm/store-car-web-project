@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewData["Title"] = "posts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html class="no-js" lang="ar" data-textdirection="rtl">
+<body>
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="row">
+                <!-- section title -->
+                <div class="title text-center wow fadeInDown">
+                    <h2>انشاء <span class="color">منشور</span></h2>
+                    <div class="border"></div>
+                </div>
+                <!-- /section title -->
+                <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+
+                    <div class="contact-details">
+
+                        <img class="img-responsive" style="width:70%;" src="~/images/blog/car.svg" />
+
+                    </div>
+                </div>
+                <!-- Contact Form  style="width:80%; margin:0 auto;"-->
+                <div class="contact-form  col-md-6  wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <form id="contact-form" role="form" enctype="multipart/form-data" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" placeholder="موقعك" class="form-control text-right" autocomplete="off" name="address" id="address" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" placeholder="عنوان المنشور" class="form-control text-right" autocomplete="off" name="title" id="title" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="number" placeholder="السعر" class="form-control text-right" autocomplete="off" name="price" id="price" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="number" placeholder="رقم الهاتف" class="form-control text-right" autocomplete="off" name="phone" id="phone" />
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" placeholder="اسم الشركة" class="form-control text-right" autocomplete="off" name="Company_id" id="Company_id" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="number" placeholder="الموديل" class="form-control text-right" autocomplete="off" name="Model" id="Model" />
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <input type="file" id="files" name="files" placeholder="صورة المنشور" class="form-control text-right" autocomplete="off" multiple />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-control text-right" name="type_id" id="type_id">
+                                    <option value="0" selected>اختيار تصنيف المنشور</option>
+                                    <option value="1">سيارات أجرة</option>
+                                    <option value="2">سيارات صالون</option>
+                                    <option value="3">سيارات  صغيرة</option>
+                                    <option value="4">سيارات الحمل</option>
+                                    <option value="5">دراجات نارية</option>
+                                    <option value="6">دراجات هوائية</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="6" placeholder="تفاصيل المنشور" class="form-control text-right" autocomplete="off" name="commend" id="commend"></textarea>
+                        </div>
+
+                        <div id="cf-submit">
+                            <input type="submit" id="post" class="btn btn-transparent" value="نشر المنشور">
+                        </div>
+                        <br />
+
+                        <div id="cf-submit">
+                            <input type="submit" id="go" class="btn btn-transparent" asp-controller="Blogs" asp-action="profile" value="ذهاب الى الصفحة">
+                        </div>
+                    </form>
+                   
+
+                </div>
+                <!-- ./End Contact Form -->
+
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> <!-- end section -->
+    <!-- end Contact Area
+            ========================================== -->
+</body>
+</html>
+
+@section Script{
+    <script>
+
+
+        $("#post").on("click", (e) => {
+            e.preventDefault();
+           
+            var object = {
+                title: $("#title").val(),
+                address: $("#address").val(),
+                phone: $("#phone").val(),
+                price: $("#price").val(),
+                Company_id: $("#Company_id").val(),
+                Model: $("#Model").val(),
+                type_id: $("#type_id").val(),
+                image: $('#files').val(),
+                commend: $("#commend").val(),
+            };
+            if (object.title === "" || object.title.trim() === "") {
+                toust.error("يرجى ادخال عنوان المنشور");
+                return;
+            }
+            else if (object.address === "" || object.address.trim() === "") {
+                toust.error("يرجى ادخال موقعك");
+                return;
+            }
+            else if (object.phone === "" || object.phone.trim() === "") {
+                toust.error("يرجى ادخال رقم الهاتف");
+                return;
+            }
+            else if (object.price === "" || object.price.trim() === "") {
+                toust.error("يرجى ادخال السعر");
+                return;
+            }
+            else if (object.Company_id === "" || object.Company_id.trim() === "") {
+                toust.error("يرجى ادخال اسم الشركة ");
+                return;
+            }
+            else if (object.Model === "" || object.Model.trim() === "") {
+                toust.error("يرجى ادخال  الموديل");
+                return;
+            }
+            else if (object.type_id === "" || object.type_id.trim() === "") {
+                toust.error("يرجى ادخال تصنيف المنشور");
+                return;
+            }
+            else if (object.image === "" || object.image.trim() === "") {
+                toust.error("يرجى ادخال الصورة");
+                return;
+            }
+            else if (object.commend === "" || object.commend.trim() === "") {
+                toust.error("يرجى ادخال تفاصيل المنشور");
+                return;
+            }
+            UploadFile();
+            call_ajax("POST", "Blogs/Posts_insert", object, null);
+        
+        });
+        
+
+        function UploadFile() {
+            var fileUpload = $("#files").get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            data.append(files[0].name, files[0]);
+            $.ajax({
+                type: "POST", url: "/Blogs/Upload_File",contentType: false,processData: false,
+                data: data, async: false,
+                success: function (message) {
+                    toust.success("تم  تحميل الصورة بنجاح");
+                },
+                error: function () {
+                    toust.error("عذرا حدث خطا اثناء  تحميل الصورة");
+                },
+                
+
+            });
+
+        }  
+      
+       
+    </script>
+  
+       
+}

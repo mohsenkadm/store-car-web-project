@@ -1,0 +1,31 @@
+﻿@if (1 == 1)
+{
+    <li class="lip">
+        <a asp-controller="blogs" asp-action="posts" class="tf-ion-log-out" style="margin-left:24px; padding:0; font-size:20px;"></a>
+        <a asp-controller="blogs" asp-action="posts" class="fontsize" style="font-size:10px; padding-top:2px;" data-scroll>تسجيل خروج</a>
+    </li>
+    <li class="lip">
+        <a asp-controller="blogs" asp-action="posts" class="tf-ion-ios-medkit" style="margin-left:24px; padding:0; font-size:20px;"></a>
+        <a asp-controller="blogs" asp-action="posts" class="fontsize" style="font-size:10px; padding-top:2px;" data-scroll>اضافة منشور</a>
+    </li>
+
+    <li class="lip">
+        <a asp-controller="blogs" asp-action="profile" class="tf-ion-person-stalker" style="margin-left:24px; padding:0; font-size:20px;"></a>
+        <a asp-controller="blogs" asp-action="profile" class="fontsize" style="font-size:10px; padding-top:2px;" data-scroll>الصفحة الشخصية</a>
+    </li>
+    <li class="lip">
+        <a data-toggle="modal" data-target="#notmodel" class="tf-ion-android-notifications" style="margin-left:24px; padding:0; font-size:20px;"></a>
+        <a data-toggle="modal" data-target="#notmodel"  class="fontsize" style="font-size:10px; padding-top:2px;" data-scroll>الاشعارات</a>
+    </li>
+}
+else
+{
+    <li class="lip">
+        <a asp-controller="Account" asp-action="SignIn" class="tf-ion-ios-locked" style="margin-left: 24px; padding:0; font-size: 20px;"></a>
+        <a class="fontsize" asp-controller="Account" asp-action="SignIn" style="font-size: 10px; padding-top:2px;" data-scroll>دخول</a>
+    </li>
+    <li class="lip">
+        <a asp-controller="Account" asp-action="SignUp" class="tf-ion-android-person-add " style="margin-left:24px; padding:0; font-size:20px;"></a>
+        <a asp-controller="Account" asp-action="SignUp" class="fontsize" style="font-size:10px; padding-top:2px;" data-scroll>تسجيل</a>
+    </li>
+}

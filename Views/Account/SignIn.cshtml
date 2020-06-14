@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<article class="wow fadeInDown" data-wow-duration="500ms" data-delay="400ms"
+         style=" padding-top:85px; margin:0 auto; width:350px; ">
+    <div class="service-block text-center" style="background-color:#171a1d">
+        <div class="search-icon text-center">
+            <i style="font-size:90px;" class="tf-ion-coffee"></i>
+        </div>
+        <h3>تسجيل الدخول</h3>
+        <br />
+        <div id="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="اسم المستخدم" autocomplete="off" class="form-control  text-right" name="name" id="name" />
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="كلمة المرور" autocomplete="off" class="form-control text-right" name="pass" id="pass" />
+            </div>
+
+            <div id="cf-submit">
+                <input type="submit" id="login-btn" class="btn btn-transparent" value="دخول" />
+            </div>
+            <div class="inline-block" style="margin-top:20px; margin-bottom:-20px;">
+                <a style="cursor:pointer; float:left;" asp-controller="Account" asp-action="SignUp">لا تمتلك حساب ؟سجل الان</a>
+                <a style="cursor:pointer; float:right; margin-left:75px;">نسيت كلمة السر؟</a>
+            </div>
+        </div>
+    </div>
+</article>
+
+@section Script{
+<script>
+    function after_login(data) {
+        userToken = data.Token;
+    }
+    $("#login-btn").on("click", (e) => {
+        e.preventDefault();
+        var object = {
+            username: $("#name").val(),
+            password: $("#pass").val(),
+        };
+        if (object.username === "" || object.username.trim() === "") {
+            toust.error("يرجى ادخال اسم المستخدم");
+            return;
+        }
+        else if (object.password === "" || object.password.trim() === "") {
+            toust.error("يرجى ادخال كلمة المرور");
+            return;
+        }
+      
+        call_ajax("POST", "Account/Login", object, after_login);
+    });
+
+</script>
+}
