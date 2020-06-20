@@ -33,5 +33,10 @@ namespace store_car_web_project.Models.Services
         {
             return await _postService.GetEntityListAsync("security.getpost", new { type_id});
         }
+
+        public async Task<List<Posts>> getpostall()
+        {
+            return await _postService.GetEntityListAsync("security.getpostall", null);
+        }
     }
 }

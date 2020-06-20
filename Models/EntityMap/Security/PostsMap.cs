@@ -27,7 +27,7 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Property(x => x.Type_id);
             builder.Property(x => x.user_id);
             builder.Property(x => x.post_id2);
-            builder.Property(x => x.like);
+            builder.Property(x => x.like_bit);
             builder.Property(x => x.count_comment);
             builder.Property(x => x.count_like);
           

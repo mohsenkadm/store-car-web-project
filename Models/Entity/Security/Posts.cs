@@ -25,7 +25,7 @@ namespace store_car_web_project.Models.Entity.Security
         public int Type_id { get; set; }
         public int user_id { get; set; }
         public int post_id2 { get; set; }
-        public bool like { get; set; }
+        public bool like_bit { get; set; }
         public int count_comment { get; set; }
         
         public int count_like { get; set; }

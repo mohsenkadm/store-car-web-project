@@ -1,5 +1,4 @@
-﻿
-@using X.PagedList.Mvc.Core; <!--import to get HTML Helper-->
+﻿@using X.PagedList.Mvc.Core; <!--import to get HTML Helper-->
 @using X.PagedList;
 @model IEnumerable<store_car_web_project.Models.Entity.Security.Posts>
 
@@ -70,7 +69,7 @@
                 @Html.DisplayNameFor(model => model.post_id2)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.like)
+                @Html.DisplayNameFor(model => model.like_bit)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.count_comment)
@@ -118,7 +117,7 @@
                     @Html.DisplayFor(modelItem => item.post_id2)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.like)
+                    @Html.DisplayFor(modelItem => item.like_bit)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.count_comment)

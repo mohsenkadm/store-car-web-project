@@ -15,7 +15,7 @@ namespace store_car_web_project.Models.Services
             _userService = new MasterService<Users>();
         }
 
-        public async Task<Users> Login(string username, string password)
+        public async Task<Users> Login_chek(string username, string password)
         {
             return await _userService.GetEntityAsync("security.user_login", new { username, password });
         }
@@ -32,6 +32,11 @@ namespace store_car_web_project.Models.Services
         public async Task<Users> getbyid(int id)
         {
             return await _userService.GetEntityAsync("security.select_user", new { id });
+        }
+
+        public async Task<List<Users>> getusers()
+        {
+            return await _userService.GetEntityListAsync("security.getuserall", null);
         }
     }
 }

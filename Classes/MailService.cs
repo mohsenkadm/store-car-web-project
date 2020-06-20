@@ -7,7 +7,7 @@ namespace store_car_web_project.Classes
 {
     public class MailService
     {
-        private readonly string From = "mohsenkadm123@gmail.com";
+        private readonly string From = "storecar308@gmail.com";
         private readonly string Pass = "mhmdmhsnali";
        
         public string SendMail(string To, string Subject, string Body)

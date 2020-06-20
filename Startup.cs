@@ -60,6 +60,8 @@ namespace store_car_web_project
             //interface
             services.AddTransient<IUserServices, UserServices>();
             services.AddTransient<IPostsServices, PostsServices>();
+            services.AddTransient<IUserInterface, UserInterface>();
+            services.AddTransient<IPostsInterface, PostsInterface>();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -85,7 +87,7 @@ namespace store_car_web_project
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=home}/{action=index}/{id?}");
+                    pattern: "{controller=blogs}/{action=posts}/{id?}");
             });
         }
     }
