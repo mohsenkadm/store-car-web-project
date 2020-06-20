@@ -26,7 +26,7 @@ namespace store_car_web_project.Models.Services
             _postsServices = postsServices;
             this._hostEnvironment = hostEnvironment;
         }
-        public async Task<object> commend_get(int post_id)
+        public async Task<object> Commendget(int post_id)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> Commend_insert(int post_id, string commend)
+        public async Task<object> Commendinsert(int post_id, string commend)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace store_car_web_project.Models.Services
 
         }
 
-        public async Task<object> delete_post(int post_id)
+        public async Task<object> Deletepost(int post_id)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> likes_get(int post_id)
+        public async Task<object> likesget(int post_id)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> like_insert(int post_id)
+        public async Task<object> likeinsert(int post_id)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace store_car_web_project.Models.Services
 
         }
 
-        public async Task<object> Posts_get(int type_id)
+        public async Task<object> Postsget(int type_id)
         {
             try
             {
@@ -177,7 +177,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> Posts_insert(Posts posts,string image)
+        public async Task<object> Postsinsert(Posts posts,string image)
         {
             try
             {
@@ -194,7 +194,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task Upload_FileAsync(IFormFileCollection file)
+        public async Task UploadFileAsync(IFormFileCollection file)
         {
 
             try

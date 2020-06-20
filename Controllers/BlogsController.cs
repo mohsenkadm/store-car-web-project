@@ -37,69 +37,57 @@ namespace store_car_web_project.Controllers
             return View();
         }
         [HttpGet]
-        public JsonResult Posts_get(int type_id)
+        public JsonResult Postsget(int type_id)
         {
-            return Json(_postsInterface.Posts_get(type_id).Result);
+            return Json(_postsInterface.Postsget(type_id).Result);
         }
         [HttpGet]
-        public JsonResult likes_get(int post_id)
+        public JsonResult likesget(int post_id)
         {
-            return Json(_postsInterface.likes_get(post_id).Result);
+            return Json(_postsInterface.likesget(post_id).Result);
         }
         [HttpGet]
-        public JsonResult commend_get(int post_id)
+        public JsonResult Commendget(int post_id)
         {
-            return Json(_postsInterface.commend_get(post_id).Result);
+            return Json(_postsInterface.Commendget(post_id).Result);
         }
         [HttpPost]
-        public void Upload_FileAsync()
+        public void UploadFileAsync()
         {
             IFormFileCollection file = Request.Form.Files;
-            _postsInterface.Upload_FileAsync(file);
+            _postsInterface.UploadFileAsync(file);
 
         }
         [HttpPost]
-        public JsonResult Posts_insert(string title, string commend, string address, int price, int phone, string image,string Company_id,int Model, int type_id)
+        public JsonResult Postsinsert(Posts posts)
         {
-            Posts posts = new Posts
-            {
-                title = title,
-                commend = commend,
-                address = address,
-                price = price,
-                phone = phone,
-                date = DateTime.UtcNow,
-                image = "",
-                Company_id = Company_id,
-                Model = Model,
-                Type_id = type_id,
-                user_id = 1,
-                post_id2 = 0,
-                like_bit = false,
-                count_like = 0,
-                count_comment = 0,
-            };
-            return Json(_postsInterface.Posts_insert(posts,image).Result);
+            posts.date = DateTime.UtcNow;
+            posts.user_id = 1;
+            posts.post_id2 = 0;
+            posts.like_bit = false;
+            posts.count_like = 0;
+            posts.count_comment = 0;
+            return Json(_postsInterface.Postsinsert(posts, posts.image).Result);
 
 
         }
         [HttpPost]
-        public JsonResult Commend_insert(int post_id, string commend)
+        public JsonResult Commendinsert(int post_id, string commend)
         {
-            return Json(_postsInterface.Commend_insert(post_id, commend).Result);  
+            return Json(_postsInterface.Commendinsert(post_id, commend).Result);  
 
         }
         [HttpPost]
-        public JsonResult like_insert(int post_id)
+        public JsonResult likeinsert(int post_id)
         {
-            return Json(_postsInterface.like_insert(post_id).Result);
+            return Json(_postsInterface.likeinsert(post_id).Result);
 
         }
 
         [HttpDelete]
-        public JsonResult delete_post(int post_id)
+        public JsonResult Deletepost(int post_id)
         {
-            return Json(_postsInterface.delete_post(post_id).Result);
+            return Json(_postsInterface.Deletepost(post_id).Result);
 
 
         }

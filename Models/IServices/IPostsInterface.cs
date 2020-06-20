@@ -9,13 +9,13 @@ namespace store_car_web_project.Models.IServices
 {
     public interface IPostsInterface
     {
-        public  Task<object> Posts_get(int type_id);
-        public Task<object> likes_get(int post_id);
-        public Task<object> commend_get(int post_id);
-        public Task Upload_FileAsync(IFormFileCollection file);
-        public  Task<object> Posts_insert(Posts posts,string image);
-        public Task<object> Commend_insert(int post_id, string commend);
-        public Task<object> like_insert(int post_id);
-        public Task<object> delete_post(int post_id);
+        public  Task<object> Postsget(int type_id);
+        public Task<object> likesget(int post_id);
+        public Task<object> Commendget(int post_id);
+        public Task UploadFileAsync(IFormFileCollection file);
+        public  Task<object> Postsinsert(Posts posts,string image);
+        public Task<object> Commendinsert(int post_id, string commend);
+        public Task<object> likeinsert(int post_id);
+        public Task<object> Deletepost(int post_id);
     }
 }

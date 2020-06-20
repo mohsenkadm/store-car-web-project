@@ -36,21 +36,16 @@ namespace store_car_web_project.Controllers
             return Json(_userInterface.Login(username, password).Result);
         }
         [HttpPost]
-        public JsonResult Register(string username, string password, string email)
+        public JsonResult Register(Users users)
         {
             Random random = new Random();
-            Users users = new Users
-            {
-                UserName = username,
-                Email = email,
-                Password = password,
-                Isonline = false,
-                IsActive = true,
-                IsDeletet = false,
-                InsertDate = DateTime.UtcNow,
-                IsConfirm = false,
-                Code = random.Next(100000, 999999).ToString()
-            };
+            users.Isonline = false;
+            users.IsActive = true;
+            users.IsDeletet = false;
+            users.InsertDate = DateTime.UtcNow;
+            users.IsConfirm = false;
+            users.Code = random.Next(100000, 999999).ToString();
+            
 
             return Json(_userInterface.Register(users).Result);
         }
@@ -58,7 +53,6 @@ namespace store_car_web_project.Controllers
         public JsonResult ConfirmAccount(string code, string username, string Email)
         {
             return Json(_userInterface.ConfirmAccount(code, username, Email).Result);
-           
         }
         [HttpGet]
         [Authorize]

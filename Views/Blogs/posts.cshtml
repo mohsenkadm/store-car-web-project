@@ -150,7 +150,7 @@
                 return;
             }
             UploadFile();
-            call_ajax("POST", "Blogs/Posts_insert", object, null);
+            call_ajax("POST", "Blogs/Postsinsert", object, null);
         
         });
         
@@ -161,7 +161,7 @@
             var data = new FormData();
             data.append(files[0].name, files[0]);
             $.ajax({
-                type: "POST", url: "/Blogs/Upload_File",contentType: false,processData: false,
+                type: "POST", url: "/Blogs/UploadFile",contentType: false,processData: false,
                 data: data, async: false,
                 success: function (message) {
                     toust.success("تم  تحميل الصورة بنجاح");
