@@ -264,20 +264,20 @@
         };
        $(document).ready(function () {
            var o = { type_id: 1 };
-           call_ajax("GET", "Blogs/Postsget", o, dat);
+           call_ajax("GET", "Blogs/GetPosts", o, dat);
         });
         
         $("#like_count").on("click", (e) => {
             e.preventDefault();
             var o = { post_id: 1 };
-            call_ajax("GET", "Blogs/likes_get", o, likes);
+            call_ajax("GET", "Blogs/GetLike", o, likes);
         });
 
        
         $("#command_count").on("click", (e) => {
             e.preventDefault();
             var o = { post_id: 1 };
-            call_ajax("GET", "Blogs/Commendget", o, command);
+            call_ajax("GET", "Blogs/GetCommend", o, command);
         });
         $("#commend_btn").on("click", (e) => {
             e.preventDefault();
@@ -289,7 +289,7 @@
                 toust.error("يرجى كتابة التعليق");
                 return;
             }
-            call_ajax("POST", "Blogs/Commendinsert", object, null);
+            call_ajax("POST", "Blogs/PostCommend", object, null);
         });
 
         $("#like_btn").on("click", (e) => {
@@ -297,7 +297,7 @@
             var object = {
                 post_id: $("#commend").val(),
             };
-            call_ajax("POST", "Blogs/likeinsert", object, null);
+            call_ajax("POST", "Blogs/PostLike", object, null);
         });
 
     </script>

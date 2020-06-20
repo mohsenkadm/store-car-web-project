@@ -37,19 +37,19 @@ namespace store_car_web_project.Controllers
             return View();
         }
         [HttpGet]
-        public JsonResult Postsget(int type_id)
+        public JsonResult GetPosts(int type_id)
         {
-            return Json(_postsInterface.Postsget(type_id).Result);
+            return Json(_postsInterface.GetPosts(type_id).Result);
         }
         [HttpGet]
-        public JsonResult likesget(int post_id)
+        public JsonResult GetLike(int post_id)
         {
-            return Json(_postsInterface.likesget(post_id).Result);
+            return Json(_postsInterface.GetLike(post_id).Result);
         }
         [HttpGet]
-        public JsonResult Commendget(int post_id)
+        public JsonResult GetCommend(int post_id)
         {
-            return Json(_postsInterface.Commendget(post_id).Result);
+            return Json(_postsInterface.GetCommend(post_id).Result);
         }
         [HttpPost]
         public void UploadFileAsync()
@@ -59,7 +59,7 @@ namespace store_car_web_project.Controllers
 
         }
         [HttpPost]
-        public JsonResult Postsinsert(Posts posts)
+        public JsonResult   PostPosts(Posts posts)
         {
             posts.date = DateTime.UtcNow;
             posts.user_id = 1;
@@ -67,20 +67,20 @@ namespace store_car_web_project.Controllers
             posts.like_bit = false;
             posts.count_like = 0;
             posts.count_comment = 0;
-            return Json(_postsInterface.Postsinsert(posts, posts.image).Result);
+            return Json(_postsInterface.PostPosts(posts, posts.image).Result);
 
 
         }
         [HttpPost]
-        public JsonResult Commendinsert(int post_id, string commend)
+        public JsonResult PostCommend(int post_id, string commend)
         {
-            return Json(_postsInterface.Commendinsert(post_id, commend).Result);  
+            return Json(_postsInterface.PostCommend(post_id, commend).Result);  
 
         }
         [HttpPost]
-        public JsonResult likeinsert(int post_id)
+        public JsonResult PostLike(int post_id)
         {
-            return Json(_postsInterface.likeinsert(post_id).Result);
+            return Json(_postsInterface.PostLike(post_id).Result);
 
         }
 
