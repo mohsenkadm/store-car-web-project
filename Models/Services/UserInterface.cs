@@ -47,40 +47,7 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> Register(string username, string password, string email)
-        {
-            try
-            {
-                Users check = await _userServices.CheckUserinfo(username, email);
-                if (check != null)
-                return Json(new { success = false, msg = "عذرا اسم المتسخدم او البريد الالكتروني  محجوز" });
-                Random random = new Random();
-                Users users = new Users
-                {
-                    UserName = username,
-                    Email = email,
-                    Password = password,
-                    Isonline = false,
-                    IsActive = true,
-                    IsDeletet = false,
-                    InsertDate = DateTime.UtcNow,
-                    IsConfirm = false,
-                    Code = random.Next(100000, 999999).ToString()
-                };
-                // MailService mail = new MailService();
-                // mail.SendMail(email, "car store", "Confirm Account Code : " + users.Code);
-
-                await _context.Users.AddAsync(users);
-                await _context.SaveChangesAsync();
-                return  Json(new { success = true, msg = "تم انشاء الحساب  بنجاح  يرجى متابعه البريد الالكتروني لتاكيده" });
-            }
-            catch (Exception ex)
-            {
-                await log.WriteAsync(ex, " UserInterface => Register");
-                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية انشاء الحساب" });
-            }
-        }
-
+      
         private object Json(object p)
         {
             return p;
@@ -129,6 +96,28 @@ namespace store_car_web_project.Models.Services
             {
                 await log.WriteAsync(ex, " UserInterface => Logout");
                 return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية تسجيل الخروج" });
+            }
+        }
+
+        public async Task<object> Register(Users users)
+        {
+            try
+            {
+                Users check = await _userServices.CheckUserinfo(users.UserName, users.Email);
+                if (check != null)
+                    return Json(new { success = false, msg = "عذرا اسم المتسخدم او البريد الالكتروني  محجوز" });
+
+                // MailService mail = new MailService();
+                // mail.SendMail(email, "car store", "Confirm Account Code : " + users.Code);
+
+                await _context.Users.AddAsync(users);
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, msg = "تم انشاء الحساب  بنجاح  يرجى متابعه البريد الالكتروني لتاكيده" });
+            }
+            catch (Exception ex)
+            {
+                await log.WriteAsync(ex, " UserInterface => Register");
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية انشاء الحساب" });
             }
         }
     }

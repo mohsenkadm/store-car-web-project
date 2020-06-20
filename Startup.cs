@@ -87,7 +87,7 @@ namespace store_car_web_project
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=blogs}/{action=posts}/{id?}");
+                    pattern: "{controller=account}/{action=signup}/{id?}");
             });
         }
     }

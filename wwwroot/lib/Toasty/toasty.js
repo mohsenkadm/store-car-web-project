@@ -64,13 +64,13 @@
         // NOTE: the paths must point from the project's root folder.
         sounds: {
             // path to sound for informational message:
-            info: "./dist/sounds/info/1.mp3",
+            info: "lib/Toasty/sounds/info/1.mp3",
             // path to sound for successfull message:
-            success: "./dist/sounds/success/1.mp3",
+            success: "lib/Toasty/sounds/success/1.mp3",
             // path to sound for warn message:
-            warning: "./dist/sounds/warning/1.mp3",
+            warning: "lib/Toasty/sounds/warning/1.mp3",
             // path to sound for error message:
-            error: "./dist/sounds/error/1.mp3",
+            error: "lib/Toasty/sounds/error/1.mp3",
         },
 
         // callback:
@@ -794,13 +794,13 @@ const toust = new Toasty({
     // NOTE: the paths must point from the project's root folder.
     sounds: {
         // path to sound for informational message:
-        info: "~/lib/Toasty/sounds/info/1.mp3",
+        info: "lib/Toasty/sounds/info/1.mp3",
         // path to sound for successfull message:
-        success: "~/lib/Toasty/sounds/success/1.mp3",
+        success: "lib/Toasty/sounds/success/1.mp3",
         // path to sound for warn message:
-        warning: "~/lib/Toasty/sounds/warning/1.mp3",
+        warning: "lib/Toasty/sounds/warning/1.mp3",
         // path to sound for error message:
-        error: "~/lib/Toasty/sounds/error/1.mp3",
+        error: "lib/Toasty/sounds/error/1.mp3",
     },
 
     // callback:

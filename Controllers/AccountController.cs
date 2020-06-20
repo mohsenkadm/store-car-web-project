@@ -38,12 +38,26 @@ namespace store_car_web_project.Controllers
         [HttpPost]
         public JsonResult Register(string username, string password, string email)
         {
-            return Json(_userInterface.Register(username, password, email));
+            Random random = new Random();
+            Users users = new Users
+            {
+                UserName = username,
+                Email = email,
+                Password = password,
+                Isonline = false,
+                IsActive = true,
+                IsDeletet = false,
+                InsertDate = DateTime.UtcNow,
+                IsConfirm = false,
+                Code = random.Next(100000, 999999).ToString()
+            };
+
+            return Json(_userInterface.Register(users).Result);
         }
         [HttpPost]
         public JsonResult ConfirmAccount(string code, string username, string Email)
         {
-            return Json(_userInterface.ConfirmAccount(code, username, Email));
+            return Json(_userInterface.ConfirmAccount(code, username, Email).Result);
            
         }
         [HttpGet]

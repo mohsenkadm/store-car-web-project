@@ -182,6 +182,7 @@ namespace store_car_web_project.Models.Services
             try
             {
                 posts.image = _hostEnvironment.WebRootPath + $@"\images\imag_post" + image.Substring(image.LastIndexOf("\\"));
+                
                 await _context.Posts.AddAsync(posts);
                 await _context.SaveChangesAsync();
                 return Json(new { success = true, msg = "تم انشاء المنشور  بنجاح  يرجى متابعه صفحتك لعرض المنشور" });
