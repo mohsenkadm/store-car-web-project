@@ -14,14 +14,12 @@ using store_car_web_project.Models.IServices;
 
 namespace store_car_web_project.Controllers
 {
-    public class BlogsController : MasterController
+    public class BlogsController : Controller
     {
         private readonly IPostsInterface _postsInterface;
 
-        public BlogsController(PblogsContext context,IMemoryCache Cache, IPostsInterface postsInterface)
+        public BlogsController( IPostsInterface postsInterface)
         {
-            _Cache = Cache;
-            _context = context;
             _postsInterface = postsInterface;
             
         }
@@ -63,7 +61,25 @@ namespace store_car_web_project.Controllers
         [HttpPost]
         public JsonResult Posts_insert(string title, string commend, string address, int price, int phone, string image,string Company_id,int Model, int type_id)
         {
-            return Json(_postsInterface.Posts_insert(title,commend,address,price,phone,image,Company_id,Model,type_id).Result);
+            Posts posts = new Posts
+            {
+                title = title,
+                commend = commend,
+                address = address,
+                price = price,
+                phone = phone,
+                date = DateTime.UtcNow,
+                image = "",
+                Company_id = Company_id,
+                Model = Model,
+                Type_id = type_id,
+                user_id = 1,
+                post_id2 = 0,
+                like_bit = false,
+                count_like = 0,
+                count_comment = 0,
+            };
+            return Json(_postsInterface.Posts_insert(posts,image).Result);
 
 
         }

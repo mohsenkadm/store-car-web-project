@@ -13,14 +13,13 @@ using store_car_web_project.Models.IServices;
 
 namespace store_car_web_project.Controllers
 {
-    public class AccountController : MasterController
+    public class AccountController : Controller
     {
         private readonly IUserInterface _userInterface;
         
-        public AccountController(PblogsContext context, IMemoryCache Cache ,IUserInterface userInterface)
+        public AccountController(IUserInterface userInterface)
         {
-            _context = context;
-            _Cache = Cache;
+        
             _userInterface = userInterface;
         }
         public IActionResult SignIn()

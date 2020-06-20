@@ -177,29 +177,10 @@ namespace store_car_web_project.Models.Services
             }
         }
 
-        public async Task<object> Posts_insert(string title, string commend, string address, int price, int phone, string image, string Company_id, int Model, int type_id)
+        public async Task<object> Posts_insert(Posts posts,string image)
         {
             try
             {
-                Posts posts = new Posts
-                {
-                    title = title,
-                    commend = commend,
-                    address = address,
-                    price = price,
-                    phone = phone,
-                    date = DateTime.UtcNow,
-                    image = FilePath,
-                    Company_id = Company_id,
-                    Model = Model,
-                    Type_id = type_id,
-                    user_id = 1,
-                    post_id2 = 0,
-                    like_bit = false,
-                    count_like = 0,
-                    count_comment = 0,
-                };
-
                 posts.image = _hostEnvironment.WebRootPath + $@"\images\imag_post" + image.Substring(image.LastIndexOf("\\"));
                 await _context.Posts.AddAsync(posts);
                 await _context.SaveChangesAsync();
