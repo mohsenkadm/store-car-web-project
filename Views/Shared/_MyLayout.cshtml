@@ -6,7 +6,6 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="ar" data-textdirection="rtl">
 <!--<![endif]-->
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Meghna One page parallax responsive HTML Template ">
@@ -47,7 +46,7 @@
 
     <!-- CUT FROM HERE -->
 
-    <section class="hero-area overlay" style="background-image: url('/images/banner/herocar.jpg');">
+    <section class="hero-area overlay" style="        background-image: url('/images/banner/background.jpg');">
         <!-- <video autoplay muted loop class="hero-video">
             <source src="images/banner/hero-video.mp4" type="video/mp4">
         </video> -->
@@ -248,7 +247,28 @@
                         <div id="setimage1" class="">
 
                         </div>
-                        @*<img id="setimage1" class="img-responsive" style="width:100%;" src="" alt="">*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade mod" data-backdrop="static" id="imageall" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width:60%" role="document">
+            <div class="modal-content" style="background-color: #353b43;">
+                <div class="modal-header">
+                    <div class="clearfix">
+                        <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size:155%">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-left" id="staticBackdropLabel">صور</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div id="setimage2" class="w3-content w3-display-container">
+                            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -280,14 +300,27 @@
     <script type="text/javascript" src="~/js/PBlogsScript.js"></script>
 
     @*  @RenderSection("Scripts", required: false)*@
-    <div id="mydiv">
-        <script>
-            $(document).ready(function () {
-                call_ajax("GET", "Blogs/GetCountNotification", null, SetCountNotifaction);
-
-            });
-        </script>
-    </div>
+<div id="mydiv">
+    <script>
+        $(document).ready(function () {
+            call_ajax("GET", "Blogs/GetCountNotification", null, SetCountNotifaction);
+        });
+        var slideIndex = 1;
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</div>
 </body>
 </html>
 

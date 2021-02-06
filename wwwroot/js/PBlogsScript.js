@@ -166,8 +166,8 @@ function datw(data) {
                 " <div   style='margin-bottom:0;'>" +
                 "   <img  src='" + str + "' style='width:100%; height:30%;' alt='image'>" +
                 " </div>" +
-                "</div>"+
-            "<div style='text-align: center;'> <a class='btn btn-main'  onclick =\"setimageinsidemodel(\'" + str + "')\" data-toggle='modal' data-target='#image'  data-effect='mfp-with-zoom' data-scroll>" +
+                "</div>" +
+                "<div style='text-align: center;'> <a class='btn btn-main'  onclick =\"call_ajax('GET', 'Blogs/Getimages/" + item.post_id +"', null, buildimage)\" data-toggle='modal' data-target='#imageall'  data-effect='mfp-with-zoom' data-scroll>" +
                 "  " + item.imagecount + "+ عرض المزيد من الصور" +
                 "</a> </div>";
         } else {
@@ -225,7 +225,7 @@ function setimageinsidemodel(image) {
     var src = image
    // var res = src.slice(15, src.length);
     $('#setimage1').empty();
-    var rows1 = "<img class='mySlides'  src='" + image + "' style='width:100%'>";
+    var rows1 = "<img class='mySlides'  src='" + image + "' style='width:100%; display: block;'>";
     $('#setimage1').append(rows1);
 };
 function datprofile(data) {
@@ -567,4 +567,23 @@ function UploadFile(id) {
             toust.error("عذرا حدث خطا اثناء  تحميل الصور");
         },
     });
+}
+
+function sh(s) {
+    slideIndex = s + 1;
+    showDivs(slideIndex);
+}
+function buildimage(data) {
+    $('#setimage2').empty();
+    $.each(data, function (i, item) {
+        var rows1 = "<img class='mySlides  img-responsive' src='images/imag_post/" + item.image_path + "' style='width:100%; height:30%;'  alt='image''>";
+        $('#setimage2').append(rows1);
+    });
+    var row2 = "<button class='w3-button w3-black w3-display-left' onclick='plusDivs(-1)'>&#10094;</button>" +
+        " <button class='w3-button w3-black w3-display-right' onclick = 'plusDivs(1)' >&#10095;</button >";
+    $('#setimage2').append(row2);
+    sh(-1       );
+}
+function setimage(src) {
+    $("#setimage2").attr("src", src);
 }

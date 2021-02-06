@@ -12,10 +12,12 @@ namespace store_car_web_project.Models.Services
     {
         private readonly MasterService<Posts> _postService;
         private readonly MasterService<Notification> _noteService;
+        private readonly MasterService<Images> _imageService;
         public PostsServices()
         {
             _postService = new MasterService<Posts>();
             _noteService = new MasterService<Notification>();
+            _imageService = new MasterService<Images>();
         }
         public async Task<Posts> CheckAccount(int post_id)
         {
@@ -75,6 +77,11 @@ namespace store_car_web_project.Models.Services
         public async  Task<Notification> GetCountNotification(int user_id)
         {
             return await  _noteService.GetEntityAsync("security.GetCountNotification", new { user_id });
+        }
+
+        public async Task<List<Images>> getimages(int post_id)
+        {
+            return await _imageService.GetEntityListAsync("security.getimages", new { post_id });
         }
     }
 }

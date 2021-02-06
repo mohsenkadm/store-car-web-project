@@ -120,7 +120,6 @@ namespace store_car_web_project.Controllers
                 return Json(new { success = false, msg = "عذرا حدث خطا اثناء جلب البيانات" });
             }
         }
-
         [HttpGet]
         public async Task<JsonResult> GetNotifecationPosts()
         {
@@ -155,6 +154,24 @@ namespace store_car_web_project.Controllers
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 
                 return Json(new { success = true, data = posts1 });
+            }
+            catch (Exception ex)
+            {
+                await log.WriteAsync(ex, " BlogsController => Posts_get");
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء جلب البيانات" });
+            }
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("Blogs/Getimages/{post_id}")]
+        public async Task<JsonResult> Getimages(int post_id)
+        {
+            try
+            {
+                List<Images> images = await _postsServices.getimages(post_id);
+                if (images == null)
+                    return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
+                return Json(new { success = true, data = images });
             }
             catch (Exception ex)
             {

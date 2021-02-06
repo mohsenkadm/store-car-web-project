@@ -15,11 +15,84 @@ html {
 }
 
 body {
+      overflow-x:hidden;
     background-color: #353b43;
     font-family: "Tajawal", sans-serif;
     color: #737f8a;
     -webkit-font-smoothing: antialiased;
 }
+
+/*w3*/
+
+.w3-content {
+    max-width: 980px;
+}
+
+.w3-content, .w3-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w3-tooltip, .w3-display-container {
+    position: relative;
+}
+/*
+*, *:before, *:after {
+    box-sizing: inherit;
+}*/
+
+div {
+    display: block;
+}
+
+.mySlides {
+    display: none;
+}
+
+.w3-black, .w3-hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.w3-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%);
+}
+
+.w3-btn, .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.w3-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%);
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
+
 .wd {
    
     height: auto;

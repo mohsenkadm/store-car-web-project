@@ -21,5 +21,6 @@ namespace store_car_web_project.Models.IServices
         public Task<List<Posts>> getsearchpost(string where_code,int user_manager);
         public void SetNotification(int user_id1);
         public Task<Notification> GetCountNotification(int user_id);
+       public  Task<List<Images>> getimages(int post_id);
     }
 }
