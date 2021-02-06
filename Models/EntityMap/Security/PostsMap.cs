@@ -30,8 +30,11 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Property(x => x.like_bit);
             builder.Property(x => x.count_comment);
             builder.Property(x => x.count_like);
-          
-           
+            builder.Ignore(x => x.userName);
+            builder.Ignore(x => x.isliked);
+            builder.Ignore(x => x.imagecount);
+            builder.Ignore(x => x.imagepath);
+
         }
     }
 }

@@ -29,8 +29,9 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Property(x => x.IsDeletet);
             builder.Property(x => x.Version).IsRowVersion();
             builder.Ignore(x => x.Token);
-            
-          
+            builder.Ignore(x => x.counts);
+
+
 
 
         }

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Notifecation";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+<section id="blog" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="title text-center wow fadeInDown">
+                <h2>أخر <span class="color">الاشعارات</span></h2>
+                <div class="border"></div>
+            </div>
+            <div id="posts" class="clearfix">
+            </div>
+        </div>
+    </div>
+</section>
+<div id="mydiv">
+    <script>
+        $(document).ready(function () {
+            $('#posts').empty()
+            call_ajax("GET", "Blogs/GetNotifecationPosts", null, datw);
+        });
+    </script>
+</div>

@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +19,6 @@ using store_car_web_project.Classes;
 using store_car_web_project.Models;
 using store_car_web_project.Models.IServices;
 using store_car_web_project.Models.Services;
-
 namespace store_car_web_project
 {
     public class Startup
@@ -35,9 +38,12 @@ namespace store_car_web_project
         {
             services.AddControllersWithViews();
             ///memory catch
+            
             services.AddMemoryCache();
             services.AddCors();
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(cfg =>
+            
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(cfg =>
             {
                 cfg.RequireHttpsMetadata = false;
                 cfg.SaveToken = true;
@@ -55,17 +61,29 @@ namespace store_car_web_project
                 };
             });
             services.AddAuthorization();
+            services.AddSession(o => {
+                o.IdleTimeout = TimeSpan.FromDays(10);
+            });
+            //services.AddAuthentication()
+            //.AddCookie(options =>
+            // {
+            //     options.LoginPath = "/Account/login1";
+            //     options.LogoutPath = "/Account/LogOff";
+            // });
+
             ///connection
             services.AddDbContext<PblogsContext>(option => option.UseSqlServer(getkeys.connectionstring));
             //interface
             services.AddTransient<IUserServices, UserServices>();
             services.AddTransient<IPostsServices, PostsServices>();
-            services.AddTransient<IUserInterface, UserInterface>();
-            services.AddTransient<IPostsInterface, PostsInterface>();
+            services.AddTransient<IChatServices, ChatServices>();
+            services.AddSignalR();
+
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,18 +94,25 @@ namespace store_car_web_project
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+           
             app.UseHttpsRedirection();
+
             app.UseRouting();
             app.UseCors();
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseSession();
             app.UseStaticFiles();
-
+            //app.UseSignalR(route =>{
+            //    route.MapHub<Signalr>("Signalr");
+            //});
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=account}/{action=signup}/{id?}");
+                    pattern: "{controller=home}/{action=index}/{id?}");
+                endpoints.MapHub<Signalr>("/Signalr");
+
             });
         }
     }

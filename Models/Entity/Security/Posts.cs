@@ -29,6 +29,9 @@ namespace store_car_web_project.Models.Entity.Security
         public int count_comment { get; set; }
         
         public int count_like { get; set; }
-      
+        public string userName { get;  set; }
+        public bool isliked { get; set; }
+        public string imagepath { get; set; }
+        public int imagecount { get; set; }
     }
 }

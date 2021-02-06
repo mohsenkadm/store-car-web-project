@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace store_car_web_project.Models.EntityMap.Security
 {
-    public class MessageMap : IEntityTypeConfiguration<Message>
+    public class MessageMap : IEntityTypeConfiguration<Messag>
     {
-        public void Configure(EntityTypeBuilder<Message> builder)
+        public void Configure(EntityTypeBuilder<Messag> builder)
         {
             builder.ToTable("Message", "Security");
             builder.HasKey(x => x.Id);
@@ -20,6 +20,8 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Property(x => x.User_name_s);
             builder.Property(x => x.User_reciver_id);
             builder.Property(x => x.User_name_r);
+            builder.Property(x => x.seen);
+            builder.Ignore(x => x.count);
         }
     }
 }

@@ -22,6 +22,6 @@ namespace store_car_web_project.Models.Entity.Security
         public bool IsDeletet { get; set;  }
         public string Token { get; set; }
         public byte[]  Version { get; set;  }
-      
+        public int counts { get;  set; }
     }
 }

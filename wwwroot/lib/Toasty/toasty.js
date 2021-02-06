@@ -1,6 +1,7 @@
 /*! Toasty.js - v1.5.0 - 2018-05-04
 * https://jakim.me/Toasty.js/
 * Copyright (c) 2015-2018 Jakim Hernández; Licensed MIT */
+
 ;(function () {
 
     'use strict';
@@ -64,13 +65,13 @@
         // NOTE: the paths must point from the project's root folder.
         sounds: {
             // path to sound for informational message:
-            info: "lib/Toasty/sounds/info/1.mp3",
+            info: "./dist/sounds/info/1.mp3",
             // path to sound for successfull message:
-            success: "lib/Toasty/sounds/success/1.mp3",
+            success: "./dist/sounds/success/1.mp3",
             // path to sound for warn message:
-            warning: "lib/Toasty/sounds/warning/1.mp3",
+            warning: "./dist/sounds/warning/1.mp3",
             // path to sound for error message:
-            error: "lib/Toasty/sounds/error/1.mp3",
+            error: "./dist/sounds/error/1.mp3",
         },
 
         // callback:
@@ -649,12 +650,14 @@
 
         // check if the transition name provided in options
         // exists in classes, if not register it:
+       
         if (classes.hasOwnProperty(options.transition) === false) registerTransition(this, options.transition);
         // use the transition name provided in options:
         var transition = classes[options.transition];
 
         // check if the toast container exists:
         var container = null;
+    
         if (typeof options.transition === 'string')
             container = document.querySelector('.' + transition.container + '--' + options.transition);
         else
@@ -677,11 +680,12 @@
             newToast.innerHTML = message;
 
         // insert the toast container into the HTML:
-        if (! containerExists)
+       
+        if (!containerExists) {
+         
             document.body
-                    .insertBefore(parentElement(container), options.prependTo);
-
-
+                .insertBefore(parentElement(container), options.removeChild);
+        }
         // OPTIONAL STEP (must be first):
         // INI: enable or disable toast sounds.
         // --------------------------------------------------------------------

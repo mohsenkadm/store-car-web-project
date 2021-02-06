@@ -3,7 +3,6 @@
     ViewData["Title"] = "SignIn";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <article class="wow fadeInDown" data-wow-duration="500ms" data-delay="400ms"
          style=" padding-top:85px; margin:0 auto; width:350px; ">
     <div class="service-block text-center" style="background-color:#171a1d">
@@ -19,40 +18,42 @@
             <div class="form-group">
                 <input type="password" placeholder="كلمة المرور" autocomplete="off" class="form-control text-right" name="pass" id="pass" />
             </div>
-
             <div id="cf-submit">
-                <input type="submit" id="login-btn" class="btn btn-transparent" value="دخول" />
+                <input type="submit" id="login-btn" class="btn btn-transparent btn-animated" value="دخول" />
             </div>
             <div class="inline-block" style="margin-top:20px; margin-bottom:-20px;">
-                <a style="cursor:pointer; float:left;" asp-controller="Account" asp-action="SignUp">لا تمتلك حساب ؟سجل الان</a>
+                <a style="cursor:pointer; float:left;" onclick="call_Action('Account/SignUp')" >لا تمتلك حساب ؟سجل الان</a>
                 <a style="cursor:pointer; float:right; margin-left:75px;">نسيت كلمة السر؟</a>
             </div>
         </div>
     </div>
 </article>
-
-@section Script{
-<script>
-    function after_login(data) {
-        userToken = data.Token;
-    }
-    $("#login-btn").on("click", (e) => {
-        e.preventDefault();
-        var object = {
-            username: $("#name").val(),
-            password: $("#pass").val(),
-        };
-        if (object.username === "" || object.username.trim() === "") {
-            toust.error("يرجى ادخال اسم المستخدم");
-            return;
+<div id="mydiv">
+    <script>
+        function after_login(token) {
+         //   debugger;
+            setCookie("token1", token, 0.5);
+            call_Action("home/index");
+            //   window.location.href = "/home/index";
         }
-        else if (object.password === "" || object.password.trim() === "") {
-            toust.error("يرجى ادخال كلمة المرور");
-            return;
-        }
-      
-        call_ajax("POST", "Account/Login", object, after_login);
-    });
+        $("#login-btn").on("click", (e) => {
+            e.preventDefault();
+          //  debugger;
+            var object = {
+                username: $("#name").val(),
+                password: $("#pass").val(),
+            };
 
-</script>
-}
+            if (object.username === "" || object.username.trim() === "") {
+                toust.warning("يرجى ادخال اسم المستخدم");
+                return;
+            }
+            else if (object.password === "" || object.password.trim() === "") {
+                toust.warning("يرجى ادخال كلمة المرور");
+                return;
+            }
+      //      debugger;
+            call_ajax("POST", "Account/Login", object, after_login);
+        });
+    </script>
+</div>

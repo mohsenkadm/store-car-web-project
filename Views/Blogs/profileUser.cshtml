@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewData["Title"] = "profileUser";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+<section class="fadeInDown">
+   <div id="animation" style="width: 30%; margin: 0 auto; margin-top: 2%;"></div>
+</section>
+<section id="prifile" class="section">
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            <div class="title text-center wow fadeInDown">
+                <h2>معلومات <span class="color">الصفحة</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+            <div id="info" class="service-block text-center wow fadeInUp" style="background-color:#171a1d; width:70%;  margin:0 auto;">
+
+            </div>
+
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section> <!-- end section -->
+<section id="blog" class="section">
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            <div class="title text-center wow fadeInDown">
+                <h2>أخر <span class="color">المنشورات</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+            <div id="posts" class="clearfix">
+
+            </div>
+            <nav aria-label="Page navigation" class="text-center">
+                <ul class="pagination pagination-lg" id="pagination-wrapper">
+                </ul>
+            </nav>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section> <!-- end section -->
+<div id="mydiv">
+    <script>
+       
+        $(document).ready(function () {
+            var o = { i: 2 }
+            call_ajax("GET", "Blogs/GetPostsProfile", o, buildTableprofileuser);
+            call_ajax("GET", "Account/GetUserInfo", o, userinfo);
+
+        });
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "lib/lottie/profile.json"
+        })
+    </script>
+ </div>

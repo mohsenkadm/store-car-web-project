@@ -6,7 +6,7 @@ using store_car_web_project.Classes;
 
 namespace store_car_web_project.Classes
 {
-    public class JsonWebToken
+    public class JsonWebToken 
     {
         private readonly byte[] symmetricKey = Convert.FromBase64String(new Keys().SecretKey);
         public string GenerateToken(int id,string username)
@@ -18,24 +18,22 @@ namespace store_car_web_project.Classes
                 string algorithms = SecurityAlgorithms.HmacSha256Signature;
 
                 SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-                {
+                {    //  
                     Issuer = "PBlogsSite",
                     Audience = "Subscriber",
                     NotBefore = DateTime.UtcNow,
                     Expires = DateTime.UtcNow.AddDays(1),
                     Subject = new ClaimsIdentity(new[] {
-                    new Claim(JwtRegisteredClaimNames.UniqueName, id.ToString()),
-                     new Claim(JwtRegisteredClaimNames.UniqueName, username),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                    new Claim("ID", id.ToString()),
+                     new Claim("USERNAME", username),
+                    new Claim("GUID", Guid.NewGuid().ToString())
                 }),
                     SigningCredentials = new SigningCredentials(securityKey, algorithms)
                 };
-
                 JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
                 SecurityToken stoken = tokenHandler.CreateToken(tokenDescriptor);
                return tokenHandler.WriteToken(stoken);
 
-              
             }
             catch(Exception ex)
             {
@@ -45,16 +43,17 @@ namespace store_car_web_project.Classes
         }
         public int ValidateToken(string jwtToken)
         {
+            
             TokenValidationParameters validationParameters = new TokenValidationParameters
             {
                 ValidateLifetime = true,
-                ValidAudience = "Subscriber",
                 ValidIssuer = "PBlogsSite",
+                ValidAudience = "Subscriber",
                 IssuerSigningKey = new SymmetricSecurityKey(symmetricKey)
             };
-            ClaimsPrincipal principal = new JwtSecurityTokenHandler().ValidateToken(jwtToken.Remove(0, 7), validationParameters, out SecurityToken securityToken);
+            ClaimsPrincipal principal = new JwtSecurityTokenHandler().ValidateToken(jwtToken.Remove(0, 7), validationParameters, out SecurityToken ValidateToken);
 
-            return Convert.ToInt32(principal?.FindFirst("Id")?.Value);
+            return Convert.ToInt32(principal?.FindFirst("ID")?.Value);
         }
     }
 }

@@ -1,1 +1,18 @@
-﻿
+﻿ PostsInterface => like_insert	1/12/2021 11:51:55 AM
+
+Object reference not set to an instance of an object.
+
+------------------------------------
+
+ BlogsController => Upload_File	2/5/2021 2:23:41 PM
+
+The process cannot access the file 'D:\store car web project\wwwroot\images\imag_post\delete1.png' because it is being used by another process.
+
+------------------------------------
+
+ BlogsController => Upload_File	2/5/2021 2:24:31 PM
+
+The process cannot access the file 'D:\store car web project\wwwroot\images\imag_post\delete1.png' because it is being used by another process.
+
+------------------------------------
+

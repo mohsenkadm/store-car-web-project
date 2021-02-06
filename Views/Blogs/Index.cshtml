@@ -3,302 +3,39 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<style>
-    .wd {
-        width: 70%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .icon {
-        font-size: 125%;
-        margin-left: 7%;
-    }
-
-    .divdown {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .value1 {
-        color: #57cbcc
-    }
-
-    .bo {
-        border: 1px solid #ccc;
-    }
-</style>
 <section id="create_posts" class="section-bg">
     <div class="container">
         <div class="row">
-            <!-- section title -->
-            <div class="title text-center wow fadeInDown">
+            <div class="title text-center header-prmary-sub wow fadeInDown">
                 <h2>انشاء <span class="color">منشور </span></h2>
                 <div class="border"></div>
             </div>
-            <!-- /section title -->
             <div class="text-center wow fadeInDown">
-                <a class="btn btn-main" asp-controller="Blogs" asp-action="posts" style="margin-bottom:2%;">انشاء منشور</a>
-
+                <a class="btn btn-main" onclick="call_Action('Blogs/posts')"  style="margin-bottom:2%;">انشاء منشور</a>
             </div>
-        </div> <!-- end row -->
-    </div> <!-- end container -->
-</section> <!-- end section -->
-<section id="search_posts" class="section" style="padding:20px 0;">
-    <div class="container">
-        <div class="row">
-            <!-- section title -->
-            <div class="title text-center wow fadeInDown">
-                <h2>بحث <span class="color">المتقدم </span></h2>
-                <div class="border"></div>
-            </div>
-            <!-- /section title -->
-            <div class="row">
-                <div class="form-group col-md-2 col-sm-6 col-xs-12">
-                    <div class="text-center form-group wow fadeInDown">
-                        <input type="number" placeholder="ادخال الموديل " class="bo form-control text-right" autocomplete="off" name="w" id="w" />
-                    </div>
-                </div>
-                <div class="form-group col-md-2 col-sm-6 col-xs-12">
-                    <div class="text-center form-group wow fadeInUp">
-                        <input type="text" placeholder="ادخال اسم الشركة " class="bo form-control text-right" autocomplete="off" name="a" id="a" />
-                    </div>
-                </div>
-                <div class="form-group col-md-2 col-sm-6 col-xs-12 ">
-                    <div class="text-center form-group wow fadeInDown">
-                        <input type="text" placeholder="ادخال السعر " class="bo form-control text-right" autocomplete="off" name="s" id="s" />
-                    </div>
-                </div>
-                <div class="text-center form-group col-md-2 col-sm-6 col-xs-12" wow fadeInUp">
-                    <select class="bo form-control text-right" name="type_id" id="type_id">
-                        <option value="0" selected>اختيار تصنيف المنشور</option>
-                        <option value="1">سيارات أجرة</option>
-                        <option value="2">سيارات صالون</option>
-                        <option value="3">سيارات  صغيرة</option>
-                        <option value="4">سيارات الحمل</option>
-                        <option value="5">دراجات نارية</option>
-                        <option value="6">دراجات هوائية</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-2 col-sm-6 col-xs-12">
-                    <div class="text-center form-group wow fadeInDown">
-                        <input type="text" placeholder="البحث عن الاسم" class="bo form-control text-right" autocomplete="off" name="d" id="d" />
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 col-xs-12">
-                    <div class="text-center wow fadeInUp">
-                        <a class="btn btn-main" style="text-align:left;">بحث</a>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end row -->
-    </div> <!-- end container -->
-</section> <!-- end section -->
-
+        </div> 
+    </div> 
+</section> 
 <section id="blog" class="section">
     <div class="container">
         <div class="row">
-            <!-- section title -->
-            <div class="title text-center wow fadeInDown">
+        <div class="title text-center header-prmary-main wow fadeInDown">
                 <h2>أخر <span class="color">المنشورات</span></h2>
                 <div class="border"></div>
             </div>
-            <!-- /section title -->
-            <div class="clearfix">
-                <article class="wd   wow fadeInUp" data-wow-duration="500ms"
-                         data-wow-delay="400ms">
-                    <div  id="posts" class="post-block">
-                       
-                    </div>
-                </article>
-                <!-- end single blog post -->
+            <div id="posts" class="clearfix">
             </div>
-            <nav aria-label="Page navigation" class="text-center">
-                <ul class="pagination pagination-lg">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a class="active" href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+            <div aria-label="Page navigation"  class="text-center">
+                <ul class="pagination pagination-lg" id="pagination-wrapper">
                 </ul>
-            </nav>
-        </div> <!-- end row -->
-    </div> <!-- end container -->
-</section> <!-- end section -->
-<!-- end Contact Area
-        ========================================== -->
-<!-- Modal -->
-<div class="modal fade" id="commentmodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background-color: #353b43;">
-            <div class="modal-header">
-                <div class="clearfix">
-                    <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" style="font-size:155%">&times;</span>
-                    </button>
-                    <h3 class="modal-title text-right" id="staticBackdropLabel">التعليقات</h3>
-                </div>
-
-            </div>
-            <div class="modal-body">
-                <div id="commands" class="pre-scrollable">
-                    
-                </div>
-                <br />
-                <div class="form-group">
-                    <input placeholder="اكتب تعليقك" class="bo form-control text-right" autocomplete="off" name="commend" id="commend" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
-                <input type="submit" id="commend_btn" class="btn btn-transparent" value="نشر" />
             </div>
         </div>
     </div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="likemodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background-color: #353b43;">
-            <div class="modal-header">
-                <div class="clearfix">
-                    <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" style="font-size:155%">&times;</span>
-                    </button>
-                    <h3 class="modal-title text-right" id="staticBackdropLabel">الاعجابات</h3>
-                </div>
-
-            </div>
-            <div class="modal-body">
-                <div class="pre-scrollable">
-                    <div id="like" class="price-title text-right">
-                       
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-@section Script{
+</section>
+<div id="mydiv">
     <script>
-        function dat(data) {
-          
-            $.each(data, function (i, item) {
-                var rows = " <div class='content' style=''>" +
-                    " <div class='price-title text-right' >" +
-                    "<h2><a asp-controller='Blogs' asp-action='profile'>محسن كاظم عبد الحسن</a></h2>" +
-                    " <br />" +
-                    " <h3>" + item.title + " </h3>" +
-                    " <span style='float:none;'> 2020/3/3 / تاريخ النشر  </span>" +
-                    " <p><strong class='value'>$" + item.price + "</strong>/ السعر</p>" +
-                    " <p><strong class='value'>" + item.Model + "</strong>/الموديل</p>" +
-                    "  <p>الشركة \ " + item.Company_id + "</p>" +
-                    " <div class='con-info clearfix text-right' style='float:none;'>" +
-                    "  <span style='float:none;'>" + item.address + "</span>" +
-                    "    <i class='tf-map-pin' style='float:none;'></i>" +
-                    "</div>" +
-                    " <div class='con-info clearfix text-right' style='float:none;'>" +
-                    "   <span style='float:none;'>" + item.phone + " /رقم الهاتف </span>" +
-                    "  <i class='tf-ion-ios-telephone-outline' style='float:none;'></i>" +
-                    " </div>" +
-                    "</div >" +
-                    "<p class='text-right'>" + item.commend + "</p>" +"</div >"+
-                   " <div class='filtr-item '>"+
-                       " <div class='portfolio-block' style='margin-bottom:0;'>"+
-                         "   <img class='' src='images/banner/herocar.jpg' style='width:100%; height:30%;' alt=''>"+
-                           "     <div class='caption'>"+
-                                   " <a class='search-icon image-popup' data-effect='mfp-with-zoom' href='images/banner/herocar.jpg'"+
-                                      "  data-lightbox='image-1'>"+
-                                     "   <i class='tf-ion-android-search'></i>"+
-                                    "</a>"+
-                                   " <h4>تكبير الصورة</h4>"+
-                               " </div>"+
-                           " </div>"+
-                        "</div>"+
-                    "<div class='divdown'>" +
-                    "  <span data-toggle='modal' id='like_count' data-target='#likemodel' style='float: right; cursor:pointer;'><a class='value1'>" + item.count_like + "</a> اعجابات </span>" +
-                    " <span data-toggle='modal' id='command_count' data-target='#commentmodel' style=' cursor:pointer;'> <a class='value1'>" + item.count_comment + "</a> تعليقات </span>"+
-                       " </div>"+
-                       " <a class='btn btn-transparent ' style='float:left;  width:33.33333333%;'>تواصل <i class='icon tf-ion-android-happy'></i></a>"+
-                        "<button class='btn btn-transparent' type='button' data-toggle='modal' data-target='#commentmodel' style=' width: 33.3333333%;'> تعليق <i class='icon tf-ion-ios-chatbubble-outline'></i>   </button>"+
-                "<button type='button' id='like_btn' class='btn btn-transparent' style='float: right;  width: 33.333333%;'>  اعجبني <i class='icon tf-ion-thumbsup'></i> </button>";
-
-                $('#posts').append(rows);
-            });
-        };
-        function likes(data) {
-            $.each(data, function (i, item) {
-                var rows = " <h3>" + item.UserName + "</h3>" +
-                    +"<span style = 'float:none;' > " + item.date + "/ تاريخ الاعجاب  </span>";
-                $('#like').append(rows);
-            });
-        };
-        function command(data) {
-            $.each(data, function (i, item) {
-                var rows = "<div class='price-title text-right'>" +
-                    " <h3>" + item.UserName + " </h3>" +
-                    "   <span style='float:none;'> " + item.date + "/ تاريخ النشر التعليق  </span>" +
-                    "</div>" +
-                    " <p style='padding: 1%;background-color:#292F36;' class=' text-right'>" + item.commend
-                " </p>";
-                $('#commands').append(rows);
-            });
-        };
-       $(document).ready(function () {
-           var o = { type_id: 1 };
-           call_ajax("GET", "Blogs/GetPosts", o, dat);
+        $(document).ready(function () {
+            call_ajax("GET", "Blogs/GetPosts", null, buildTable);
         });
-        
-        $("#like_count").on("click", (e) => {
-            e.preventDefault();
-            var o = { post_id: 1 };
-            call_ajax("GET", "Blogs/GetLike", o, likes);
-        });
-
-       
-        $("#command_count").on("click", (e) => {
-            e.preventDefault();
-            var o = { post_id: 1 };
-            call_ajax("GET", "Blogs/GetCommend", o, command);
-        });
-        $("#commend_btn").on("click", (e) => {
-            e.preventDefault();
-            var object = {
-                commend: $("#commend").val(),
-                post_id: $("#commend").val(),
-            };
-            if (object.commend === "" || object.commend.trim() === "") {
-                toust.error("يرجى كتابة التعليق");
-                return;
-            }
-            call_ajax("POST", "Blogs/PostCommend", object, null);
-        });
-
-        $("#like_btn").on("click", (e) => {
-            e.preventDefault();
-            var object = {
-                post_id: $("#commend").val(),
-            };
-            call_ajax("POST", "Blogs/PostLike", object, null);
-        });
-
     </script>
-}
+</div>

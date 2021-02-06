@@ -10,12 +10,10 @@
 <section id="search_posts" class="section" style="padding:20px 0;">
     <div class="container">
         <div class="row">
-            <!-- section title -->
             <div class="title text-center wow fadeInDown">
                 <h2>واجهه <span class="color"> المستخدمين </span></h2>
                 <div class="border"></div>
             </div>
-            <!-- /section title -->
            
             @using (Html.BeginForm("usersview","usercontrol", FormMethod.Get))
             { <div class="row">
@@ -31,12 +29,9 @@
             </div>
         </div>
             }
-        </div> <!-- end row -->
-    </div> <!-- end container -->
-</section> <!-- end section -->
-@*<nav aria-label="Users paging">
-        @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model });
-    </nav>*@
+        </div>
+    </div>
+</section> 
 <p>@Model.Count() users exist.</p>
 
 <table class="table table-responsive">
@@ -135,22 +130,8 @@
     new X.PagedList.Mvc.Core.Common.PagedListRenderOptions
     {
         DisplayItemSliceAndTotal = true,
-        ContainerDivClasses = new[] { "navigation" },
+        ContainerDivClasses = new[] { "c navigation text-center" },
         LiElementClasses = new[] { "page-item" },
         PageClasses = new[] { "page-link" },
 
     })
-@*<nav aria-label="Suppliers navigation example">
-        <vc:pager action="usersview" paging-list="@Model" />
-    </nav>*@
-
-@*@section Scripts{
-        <script>
-            // Workaround to fix style of text for showing items .. through ..
-            // Problem related to Boostrap 4 according to issue in link below
-            // https://github.com/dncuug/X.PagedList/issues/127
-            $(document).ready(function () {
-                $('ul.pagination > li.disabled > a').addClass('page-link');
-            });
-        </script>
-    }*@

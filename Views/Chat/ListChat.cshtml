@@ -1,0 +1,59 @@
+﻿
+@using X.PagedList.Mvc.Core; <!--import to get HTML Helper-->
+@using X.PagedList;
+@model IEnumerable<store_car_web_project.Models.Entity.Security.Users>
+@{
+    ViewData["Title"] = "ListChat";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+<section id="search_posts" class="section" style="padding:20px 0;">
+    <div class="container">
+        @using (Html.BeginForm("ListChat", "Chat", FormMethod.Get))
+        {
+            <div class="row">
+                <div class="title text-center wow fadeInDown">
+                    <h2>محادثات  <span class="color">مع المستخدمين </span></h2>
+                    <div class="border"></div>
+                </div>
+                <div class="row" style="margin-left:20%; margin-right:20%;">
+                    <div class="form-group col-md-10 col-sm-10 col-xs-10">
+                        <div class="text-center form-group wow fadeInDown">
+                            <input type="text" placeholder="البحث عن الاسم المستخدم" class="bo form-control text-right" autocomplete="off" name="nameuser" id="nameuser" />
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <div class="text-center wow fadeInUp">
+                            <input type="submit" id="search-user-btn" class="btn btn-transparent" value="بحث" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+</section>
+<div class="text-center wow fadeInUp" style="margin-left:20%;  margin-right:20%; ">
+    <table class="table table-responsive" style="margin-bottom:0px;">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="background-color: #2f383d;">
+                    <td class=" h3 price-title">
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        <a class='btn btn-transparent' asp-controller="Chat" asp-action="Chat"  style="border:1px solid #4e595f;">تواصل <i class='icon tf-ion-ios-chatbubble-outline'></i></a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+    </table>
+</div>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("ListChat", new { page = page }),
+    new X.PagedList.Mvc.Core.Common.PagedListRenderOptions
+    {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "c navigation text-center" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+
+    })

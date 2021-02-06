@@ -37,40 +37,28 @@
     <link href="~/lib/Toasty/toasty.css" rel="stylesheet" />
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="~/css/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
 
+    <script type="text/javascript" src="~/plugins/jquery/dist/jquery.min.js"></script>
 
-    <div class="preloader">
-        <div class="sk-cube-grid">
-            <div class="sk-cube sk-cube1"></div>
-            <div class="sk-cube sk-cube2"></div>
-            <div class="sk-cube sk-cube3"></div>
-            <div class="sk-cube sk-cube4"></div>
-            <div class="sk-cube sk-cube5"></div>
-            <div class="sk-cube sk-cube6"></div>
-            <div class="sk-cube sk-cube7"></div>
-            <div class="sk-cube sk-cube8"></div>
-            <div class="sk-cube sk-cube9"></div>
-        </div>
-    </div>
+    <!-- CUT FROM HERE -->
 
-    <section class="hero-area overlay" style="background-image: url('images/banner/herocar.jpg');">
+    <section class="hero-area overlay" style="background-image: url('/images/banner/herocar.jpg');">
         <!-- <video autoplay muted loop class="hero-video">
             <source src="images/banner/hero-video.mp4" type="video/mp4">
         </video> -->
         <div class="block">
-            <h1>معرض الألكتروني للسيارات </h1>
-            <p>انضم الينا لانشاء ملف شخصي جديد او لاكتشاف ألسيارات المستعرضة و الرائعة الخاصة بلمشتركين</p>
+            <h1 class="header-prmary-main">معرض الألكتروني للسيارات </h1>
+            <p class="header-prmary-sub">انضم الينا لانشاء ملف شخصي جديد او لاكتشاف ألسيارات المستعرضة و الرائعة الخاصة بلمشتركين</p>
         </div>
     </section>
 
-
     <header id="navigation" class="navbar navigation">
-        <div class="container">
+        <div class="containr2 ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -81,20 +69,24 @@
             </div>
             <nav class="collapse navbar-collapse navbar-left" role="Navigation">
                 <ul id="nav" class="nav navbar-nav navigation-menu">
-                    @Html.Partial("_Partial")
+                    <partial name="_Partial" />
                 </ul>
             </nav>
 
             <nav class="collapse navbar-collapse navbar-right" role="Navigation">
                 <ul id="nav" class="nav navbar-nav navigation-menu">
-                    <li><a data-scroll href="#body">الرئيسية</a></li>
-                    <li><a data-scroll href="#services">اختيار المنشورات</a></li>
-                    <li><a data-scroll href="#our-team">المشتركين</a></li>
-                    <li><a data-scroll href="#about">من نحن؟</a></li>
-                    <li><a data-scroll href="#contact-us">تواصل معنا</a></li>
+                    <li><a data-scroll class="header_link" onclick="call_Action('Home/Index')">الرئيسية</a></li>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a data-scroll class="header_link" onclick="call_Action('Home/services')">اختيار المنشورات</a></li>
+                    }
+                    <li><a data-scroll class="header_link" onclick="call_Action('Home/team')">المشتركين</a></li>
+                    <li><a data-scroll class="header_link" onclick="call_Action('Home/about')">من نحن؟</a></li>
+                    <li><a data-scroll class="header_link" onclick="call_Action('Home/counter')">التفاعلات</a></li>
+                    <li><a data-scroll class="header_link" onclick="call_Action('Home/contact')">تواصل معنا</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
@@ -163,22 +155,53 @@
                     </div>
                 </div>
                 <div class="modal-body">
+                    <div id="note" class="pre-scrollable">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="commentmodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #353b43;">
+                <div class="modal-header">
+                    <div class="clearfix">
+                        <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size:155%">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-right" id="staticBackdropLabel">التعليقات</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="commands" class="pre-scrollable">
+
+                    </div>
+                    <br />
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="likemodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #353b43;">
+                <div class="modal-header">
+                    <div class="clearfix">
+                        <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size:155%">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-right" id="staticBackdropLabel">الاعجابات</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
                     <div class="pre-scrollable">
-                        <div class="price-title text-right">
-                            <p>تم التعليق على منشورك من قبل محسن كاظم عبد الحسن</p>
-                            <span style="float:none;"> 2020/3/3 / تاريخ الاشعار  </span>
-                        </div>
-                        <div class="price-title text-right">
-                            <p>تم التعليق على منشورك من قبل محسن كاظم عبد الحسن</p>
-                            <span style="float:none;"> 2020/3/3 / تاريخ الاشعار  </span>
-                        </div>
-                        <div class="price-title text-right">
-                            <p>تم التعليق على منشورك من قبل محسن كاظم عبد الحسن</p>
-                            <span style="float:none;"> 2020/3/3 / تاريخ الاشعار  </span>
-                        </div>
-                        <div class="price-title text-right">
-                            <p>تم التعليق على منشورك من قبل محسن كاظم عبد الحسن</p>
-                            <span style="float:none;"> 2020/3/3 / تاريخ الاشعار  </span>
+                        <div id="like" class="price-title text-right">
                         </div>
                     </div>
                 </div>
@@ -188,7 +211,49 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="~/plugins/jquery/dist/jquery.min.js"></script>
+    <div class="modal fade" id="messagemodel" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #353b43;">
+                <div class="modal-header">
+                    <div class="clearfix">
+                        <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size:155%">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-right" id="staticBackdropLabel">الرسائل</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="message" class="pre-scrollable">
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-transparent" data-dismiss="modal">اغلاق</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade mod" data-backdrop="static" id="image" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: #353b43;">
+                <div class="modal-header">
+                    <div class="clearfix">
+                        <button type="button" style="margin-left:10%;" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size:155%">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-left" id="staticBackdropLabel">Picture</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <div id="setimage1" class="">
+
+                        </div>
+                        @*<img id="setimage1" class="img-responsive" style="width:100%;" src="" alt="">*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap 3.1 -->
     <script type="text/javascript" src="~/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Slick Carousel -->
@@ -200,7 +265,7 @@
     <!-- Magnific popup -->
     <script type="text/javascript" src="~/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <!-- Google Map API -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    @*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>*@
     <!-- Sticky Nav -->
     <script type="text/javascript" src="~/plugins/Sticky/jquery.sticky.js"></script>
     <!-- Number Counter Script -->
@@ -209,8 +274,20 @@
     <script type="text/javascript" src="~/plugins/wow/dist/wow.min.js"></script>
     <script src="~/lib/Toasty/toasty.js"></script>
     <!-- Custom js -->
+    <script type="text/javascript" src="~/lib/lottie/lottie.js"></script>
+    <script type="text/javascript" src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
     <script type="text/javascript" src="~/js/script.js"></script>
     <script type="text/javascript" src="~/js/PBlogsScript.js"></script>
-    @RenderSection("Script", required: false)
+
+    @*  @RenderSection("Scripts", required: false)*@
+    <div id="mydiv">
+        <script>
+            $(document).ready(function () {
+                call_ajax("GET", "Blogs/GetCountNotification", null, SetCountNotifaction);
+
+            });
+        </script>
+    </div>
 </body>
 </html>
+
