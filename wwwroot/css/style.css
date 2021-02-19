@@ -1037,13 +1037,15 @@ color: #fff;
     #contact-submit:hover,
     #Register-btn :hover,
     #confirm-btn:hover,
+    #email-btn:hover,
+    #updatepass-btn:hover,
     #login-btn :hover {
         border-color: #57cbcc;
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     }
 
-#contact-submit, #post, #go, #Register-btn, #confirm-btn, #login-btn {
+#contact-submit, #post, #go, #Register-btn, #confirm-btn, #email-btn, #updatepass-btn, #login-btn {
     border: 1px solid rgba(236, 239, 241, 0.07);
     background: #57cbcc;
     padding: 12px 0;
@@ -1060,6 +1062,8 @@ color: #fff;
     #contact-submit:hover::after,
     #Register-btn :hover::after,
     #confirm-btn:hover::after,
+    #email-btn:hover::after,
+    #updatepass-btn:hover::after,
     #login-btn :hover::after {
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
@@ -1073,6 +1077,8 @@ color: #fff;
 #post::after, #go::after,
 #Register-btn::after,
 #confirm-btn::after,
+#email-btn::after,
+#updatepass-btn::after,
 #login-btn::after {
     content: "";
     display: inline-block;
@@ -1084,12 +1090,14 @@ color: #fff;
 }
 #post:active, #go:active,
 #contact-submit:active,
- #Register-btn :active,
- #confirm-btn:active,
- #login-btn :active {
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-    }
+#Register-btn :active,
+#confirm-btn:active,
+#email-btn:active,
+#updatepass-btn:active,
+#login-btn :active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .btn-animated {
     animation: movebettom .5s ease-out .75s;

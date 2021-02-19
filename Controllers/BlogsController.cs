@@ -41,10 +41,17 @@ namespace store_car_web_project.Controllers
             TypeManger = _TypeId;
             return View();
         }
-
+        [AllowAnonymous]
         public IActionResult posts()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("login1", "Account");
+            }
         }
         [Route("Blogs/Update_posts/{post_id}")]
         public IActionResult Update_posts(int post_id)
@@ -53,15 +60,30 @@ namespace store_car_web_project.Controllers
             postManger = _post_id;
             return View();
         }
+        [AllowAnonymous]
         public IActionResult profile()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("login1", "Account");
+            }
         }
-       
+       [AllowAnonymous]
         public IActionResult Advanced_Search()
         {
             _hubContext.Clients.All.SendAsync("displaynot", "");
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("login1", "Account");
+            }
         }
         [Route("Blogs/profileUser/{user_id}")]
         public IActionResult profileUser(int user_id)
@@ -272,15 +294,21 @@ namespace store_car_web_project.Controllers
            
         }
         [HttpGet]
+        [AllowAnonymous]
         public async Task<JsonResult> GetNotification()
         {
             try
             {
-                List<Notification> Notification = await _postsServices.GetNotification(UserManger.Id);
-                if (Notification == null)
-                    return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
+                if (User.Identity.IsAuthenticated)
+                {
+                    List<Notification> Notification = await _postsServices.GetNotification(UserManger.Id);
+                    if (Notification == null)
+                        return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 
-                return Json(new { success = true, data = Notification });
+                    return Json(new { success = true, data = Notification });
+                }
+                else
+                return Json(new { success = false });
             }
             catch (Exception ex)
             {
@@ -289,14 +317,20 @@ namespace store_car_web_project.Controllers
             }
           
         }
-
+        
         [HttpGet]
+        [AllowAnonymous]
         public async Task<JsonResult> GetCountNotification()
         {
             try
             {
-                Notification notification = await _postsServices.GetCountNotification(UserManger.Id);
-                return Json(new { success = true, data = notification });
+                if (User.Identity.IsAuthenticated)
+                {
+                    Notification notification = await _postsServices.GetCountNotification(UserManger.Id);
+                    return Json(new { success = true, data = notification });
+                }
+                else
+                    return Json(new { success = false });
             }
             catch (Exception ex)
             {
@@ -431,7 +465,7 @@ namespace store_car_web_project.Controllers
         {
             
             try
-            { await _hubContext.Clients.All.SendAsync("displaynot","");
+            { 
                 Posts posts1 = await _postsServices.CheckAccount(post_id);
                 if (posts1 == null)
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية التعليق" });
@@ -468,6 +502,7 @@ namespace store_car_web_project.Controllers
                 };
                 await _context.Notifications.AddAsync(notification);
                 await _context.SaveChangesAsync();
+                await _hubContext.Clients.All.SendAsync("displaynot", "");
                 return Json(new { success = true, data = posts1, msg = "تم التعليق  بنجاح  " });
             }
             catch (Exception ex)
@@ -481,7 +516,7 @@ namespace store_car_web_project.Controllers
         public async Task<JsonResult> PostLike(int post_id)
         {
             try
-            {   await _hubContext.Clients.All.SendAsync("displaynot", "");
+            {
                 Posts posts1 = await _postsServices.CheckAccount(post_id);
                 if (posts1 == null)
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية الاعجاب" });
@@ -527,6 +562,7 @@ namespace store_car_web_project.Controllers
                 };
                 await _context.Notifications.AddAsync(notification);
                 await _context.SaveChangesAsync();
+                await _hubContext.Clients.All.SendAsync("displaynot", "");
                 return Json(new { success = true, data = posts1, msg = "تم اعجاب بنجاح  " });
             }
             catch (Exception ex)

@@ -36,7 +36,14 @@ namespace store_car_web_project.Controllers
         }
         public IActionResult services()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            { 
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("login1", "Account");
+            }
         }
         public IActionResult Index()
         {

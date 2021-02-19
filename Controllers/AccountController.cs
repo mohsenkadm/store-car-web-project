@@ -38,7 +38,6 @@ namespace store_car_web_project.Controllers
             return View();
         }
         [HttpPost]
-        
         public async Task<JsonResult> Login(string username,string password)
         {
             try
@@ -91,10 +90,58 @@ namespace store_car_web_project.Controllers
             }
             catch (Exception ex)
             {
-                await log.WriteAsync(ex, " UserInterface => Register");
+                await log.WriteAsync(ex, " Account => Register");
                 return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية انشاء الحساب" });
             }
          
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Account/ForgatePassword")]
+        public async Task<JsonResult> ForgatePassword(string email) 
+        {
+            try
+            {
+                Users check = await _userServices.CheckUserinfo("", email);
+                if (check == null)
+                    return Json(new { success = false, msg = "عذرا بريد الالكتروني غير موجود سابقا" });
+                Random random = new Random();
+                check.Code = random.Next(100000, 999999).ToString();
+                MailService mail = new MailService();
+                mail.SendMail(check.Email, "car store", "Confirm Account Code : " + check.Code);
+
+                _context.Entry(check).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, msg = "تم ارسال الرمز   بنجاح  يرجى متابعه البريد الالكتروني لتاكيده" });
+            }
+            catch (Exception ex)
+            {
+                await log.WriteAsync(ex, " Account => ForgatePassword");
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية تعديل الحساب" });
+            }
+
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Account/Update_Pass")]
+        public async Task<JsonResult> Update_Pass(string pass,string email)
+        {
+            try
+            {
+                Users check = await _userServices.CheckUserinfo("", email);
+                if (check == null)
+                    return Json(new { success = false, msg = "عذرا بريد الالكتروني غير موجود سابقا" });
+                check.Password = pass;
+                _context.Entry(check).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, msg = "تم تعديل كلمة المرور بنجاح" });
+            }
+            catch (Exception ex)
+            {
+                await log.WriteAsync(ex, " Account => Update_Pass");
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية تعديل كللمة المرور" });
+            }
+
         }
         [HttpPost]
         public async Task<JsonResult> ConfirmAccount(string code, string username, string Email)
@@ -104,18 +151,15 @@ namespace store_car_web_project.Controllers
                 Users users = await _userServices.checkConfirmAccount(code, username, Email);
                 if (users == null)
                     return Json(new { success = false, msg = "معلومات التاكيد غير صحيحه" });
-
                 users.IsConfirm = true;
-
                 _context.Entry(users).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 return Json(new { success = true, msg = "تم تاكيد الحساب بنجاح" });
-
             }
             catch (Exception ex)
             {
                 await log.WriteAsync(ex, " UserInterface => ConnfirmAccount");
-                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية انشاء الحساب" });
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية تعديل  الحساب" });
             }
         }
         [HttpGet]
@@ -135,7 +179,6 @@ namespace store_car_web_project.Controllers
                 await _context.SaveChangesAsync();
                 UserManger = null;
                 return Json(new { success = true, msg = "تم تسجيل الخروج بنجاح" });
-
             }
             catch (Exception ex)
             {
@@ -152,8 +195,7 @@ namespace store_car_web_project.Controllers
             {
                 try
                 {
-                    List<Users> users = await _userServices.GetUserInfo(1);
-
+                    List<Users> users = await _userServices.GetUserInfo(UserManger.Id);
                     if (users == null)
                         return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 
@@ -170,7 +212,7 @@ namespace store_car_web_project.Controllers
             {
                 try
                 {
-                    List<Users> users = await _userServices.GetUserInfo(2);
+                    List<Users> users = await _userServices.GetUserInfo(user_idManger);
                     if (users == null)
                         return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 

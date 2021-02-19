@@ -95,7 +95,6 @@
         call_ajax("GET", "Blogs/GetPostsId", null, fill);
         function fill(data) {
             console.log(data);
-           
             $("#title").val(data.title);
             $("#address").val(data.address);
             $("#phone").val(data.phone);
@@ -155,27 +154,9 @@
                 toust.warning("يرجى ادخال تفاصيل المنشور");
                 return;
             }
-            UploadFile();
-            call_ajax("POST", "Blogs/UpdatePosts", object, null);
-
+            call_ajax("POST", "Blogs/UpdatePosts", object, upluad);
         });
-        function UploadFile() {
-           
-            var fileUpload = $("#files").get(0);
-            var files = fileUpload.files;
-            var data = new FormData();
-            data.append(files[0].name, files[0]);
-            $.ajax({
-                type: "POST", url: "/Blogs/UploadFile", contentType: false, processData: false,
-                data: data, async: false,
-                success: function (message) {
-                    toust.success("تم  تحميل الصورة بنجاح");
-                },
-                error: function () {
-                    toust.error("عذرا حدث خطا اثناء  تحميل الصورة");
-                },
-            });
-        }
+       
     </script>
 </div>
 

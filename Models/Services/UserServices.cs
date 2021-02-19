@@ -38,7 +38,6 @@ namespace store_car_web_project.Models.Services
         {
             return  _userService.GetEntityList("security.getuserall", null);
         }
-
         public async Task<List<Users>> GetUserInfo(int Id)
         {
             return await _userService.GetEntityListAsync("security.getuserinfo", new { Id });

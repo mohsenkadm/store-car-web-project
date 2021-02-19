@@ -16,6 +16,7 @@ namespace store_car_web_project.Models.Entity.Security
         public string User_name_r { get; set; }
         public bool seen { get; set; }
         public int count { get; set; }
+        public bool reciver { get; set; }
 
 
     }

@@ -16,3 +16,257 @@ The process cannot access the file 'D:\store car web project\wwwroot\images\imag
 
 ------------------------------------
 
+ ChatController => GetCountMessage	2/7/2021 6:35:44 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/7/2021 6:36:42 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/7/2021 6:37:00 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+MasterServices => RunSpAsync	2/7/2021 6:43:57 PM
+
+Procedure or function 'setMessage' expects parameter '@user_id1', which was not supplied.
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/9/2021 4:17:24 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/9/2021 4:18:32 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/9/2021 4:19:29 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/9/2021 4:19:35 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/9/2021 4:19:37 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/9/2021 4:31:24 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/9/2021 4:32:24 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:44:00 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:46:12 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:46:58 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:47:27 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:47:47 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:50:04 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 8:50:20 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:06:22 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:10:15 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+Send Mail	2/10/2021 9:13:11 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+
+ Account => ForgatePassword	2/10/2021 9:13:11 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:15:48 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:45:18 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:48:25 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/10/2021 9:55:43 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:44:10 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:44:39 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:45:29 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:45:57 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:49:02 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:51:10 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:51:19 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 7:51:45 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 8:00:22 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 8:00:51 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetCountMessage	2/12/2021 8:02:09 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/17/2021 5:13:09 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/17/2021 5:13:15 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/19/2021 6:06:07 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/19/2021 6:06:13 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => SendMessage	2/19/2021 9:01:49 PM
+
+An error occurred while updating the entries. See the inner exception for details.
+Invalid column name 'User_name_r'.
+Invalid column name 'User_name_s'.
+
+------------------------------------
+

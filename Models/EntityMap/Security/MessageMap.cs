@@ -17,11 +17,12 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Property(x => x.Message_txt);
             builder.Property(x => x.Message_date);
             builder.Property(x => x.User_sender_id);
-            builder.Property(x => x.User_name_s);
+            builder.Ignore(x => x.User_name_s);
             builder.Property(x => x.User_reciver_id);
-            builder.Property(x => x.User_name_r);
+            builder.Ignore(x => x.User_name_r);
             builder.Property(x => x.seen);
             builder.Ignore(x => x.count);
+            builder.Ignore(x => x.reciver);
         }
     }
 }

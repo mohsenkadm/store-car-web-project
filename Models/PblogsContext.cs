@@ -21,11 +21,13 @@ namespace store_car_web_project.Models
             modelBuilder.ApplyConfiguration(new PostsMap());
             modelBuilder.ApplyConfiguration(new ImagesMap());
             modelBuilder.ApplyConfiguration(new NotificationMap());
+            modelBuilder.ApplyConfiguration(new MessageMap());
         }
         public  DbSet<Users> Users { get; set; }
         public DbSet<Posts> Posts { get; set; }
         public DbSet<Images> images { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Messag> messags { get; set; }
 
     }
 }

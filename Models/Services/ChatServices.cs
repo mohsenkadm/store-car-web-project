@@ -18,17 +18,21 @@ namespace store_car_web_project.Models.Services
 
         public async Task<Messag> GetCountMessage(int user_id)
         {
-            return await _chatServices.GetEntityAsync("security.GetCountNotification", new { user_id });
+            return await _chatServices.GetEntityAsync("security.GetCountMessage", new { user_id });
+        }
+        public async Task<List<Messag>> GetMessage(int user_id)
+        {
+            return await _chatServices.GetEntityListAsync("security.GetMessage", new { user_id });
         }
 
-        public async Task<Messag> GetMessage(int user_id)
+        public async Task<List<Messag>> GetMessagechat(int User_reciver_id, int User_sender_id)
         {
-            return await _chatServices.GetEntityAsync("security.GetCountNotification", new { user_id });
+            return await _chatServices.GetEntityListAsync("security.GetMessagechat", new { User_reciver_id, User_sender_id });
         }
 
         public async void SetCountMessage(int user_id)
         {
-            await _chatServices.RunSpAsync("security.setnotefication", new { user_id });
+            await _chatServices.RunSpAsync("security.setMessage", new { user_id });
         }
     }
 }

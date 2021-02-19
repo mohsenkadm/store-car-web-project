@@ -10,6 +10,7 @@ namespace store_car_web_project.Models.IServices
     {
        public void SetCountMessage(int user_id);
        public Task<Messag> GetCountMessage(int user_id);
-       public Task<Messag> GetMessage(int user_id);
+       public Task<List<Messag>> GetMessage(int user_id);
+     public   Task<List<Messag>> GetMessagechat(int User_reciver_id, int User_sender_id);
     }
 }

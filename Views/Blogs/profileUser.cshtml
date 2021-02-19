@@ -15,7 +15,7 @@
                 <div class="border"></div>
             </div>
             <!-- /section title -->
-            <div id="info" class="service-block text-center wow fadeInUp" style="background-color:#171a1d; width:70%;  margin:0 auto;">
+            <div id="info" class="service-block text-center wow fadeInUp " style="background-color:#171a1d; width:70%;  margin:0 auto;">
 
             </div>
 
@@ -48,7 +48,6 @@
             var o = { i: 2 }
             call_ajax("GET", "Blogs/GetPostsProfile", o, buildTableprofileuser);
             call_ajax("GET", "Account/GetUserInfo", o, userinfo);
-
         });
         var animation = bodymovin.loadAnimation({
             container: document.getElementById('animation'),
