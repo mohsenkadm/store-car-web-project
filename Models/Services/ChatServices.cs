@@ -16,6 +16,11 @@ namespace store_car_web_project.Models.Services
             _chatServices = new MasterService<Messag>();
         }
 
+        public async Task<Messag> Checkmessage(int id)
+        {
+            return await _chatServices.GetEntityAsync("security.Checkmessage", new { id });
+        }
+
         public async Task<Messag> GetCountMessage(int user_id)
         {
             return await _chatServices.GetEntityAsync("security.GetCountMessage", new { user_id });
@@ -33,6 +38,10 @@ namespace store_car_web_project.Models.Services
         public async void SetCountMessage(int user_id)
         {
             await _chatServices.RunSpAsync("security.setMessage", new { user_id });
+        }
+        public async void SetSeenMessage(int User_reciver_id,int User_sender_id)
+        {
+            await _chatServices.RunSpAsync("security.setseenmessage", new { User_reciver_id, User_sender_id });
         }
     }
 }

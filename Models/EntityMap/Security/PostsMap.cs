@@ -34,6 +34,7 @@ namespace store_car_web_project.Models.EntityMap.Security
             builder.Ignore(x => x.isliked);
             builder.Ignore(x => x.imagecount);
             builder.Ignore(x => x.imagepath);
+            builder.Ignore(x => x.Isonline);
 
         }
     }

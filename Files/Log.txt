@@ -270,3 +270,99 @@ Invalid column name 'User_name_s'.
 
 ------------------------------------
 
+ ChatController => GetMessage	2/27/2021 8:40:49 AM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+MasterServices => RunSpAsync	2/27/2021 12:30:38 PM
+
+Procedure or function 'setMessage' expects parameter '@User_reciver_id', which was not supplied.
+
+------------------------------------
+
+ ChatController => RemoveMessages	2/27/2021 2:54:39 PM
+
+The entity type 'List<Messag>' was not found. Ensure that the entity type has been added to the model.
+
+------------------------------------
+
+MasterServices => GetEntityAsync	2/27/2021 3:10:59 PM
+
+Could not find stored procedure 'security.Checkmessage'.
+
+------------------------------------
+
+ ChatController => RemoveMessage	2/27/2021 3:10:59 PM
+
+Could not find stored procedure 'security.Checkmessage'.
+
+------------------------------------
+
+ UserInterface => Logout	2/27/2021 5:24:22 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ UserInterface => Logout	2/27/2021 5:28:19 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/27/2021 5:38:16 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ UserInterface => Logout	2/27/2021 5:38:25 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/27/2021 8:52:54 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	2/27/2021 8:52:58 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => SendMessage	3/2/2021 9:17:21 PM
+
+Object reference not set to an instance of an object.
+
+------------------------------------
+
+ ChatController => GetMessage	3/5/2021 12:40:18 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ UserInterface => Login	3/5/2021 3:08:32 PM
+
+Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+
+------------------------------------
+
+ ChatController => GetMessage	3/5/2021 3:14:05 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
+ ChatController => GetMessage	3/10/2021 4:39:46 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+

@@ -8,7 +8,8 @@ namespace store_car_web_project.Models.IServices
 {
     public interface IPostsServices
     {
-        public Task<Posts> CheckAccount(int post_id);
+        public Task<Posts> Checkpost(int post_id);
+        public Task<Notification> Checknot(int notifcation_id);
         public Task<Posts>   checklike(int post_id,int id);
         public Task<List<Posts>> getpost(int type_id,int user_manager);
         public Task<Posts> GetPostsId(int post_id);

@@ -34,13 +34,13 @@ namespace store_car_web_project.Models.Services
             return await _userService.GetEntityAsync("security.select_user", new { id });
         }
 
-        public  List<Users> getusers()
+        public List<Users> getusers()
         {
             return  _userService.GetEntityList("security.getuserall", null);
         }
-        public async Task<List<Users>> GetUserInfo(int Id)
+        public async Task<Users> GetUserInfo(int Id)
         {
-            return await _userService.GetEntityListAsync("security.getuserinfo", new { Id });
+            return await _userService.GetEntityAsync("security.getuserinfo", new { Id });
         }
     }
 }

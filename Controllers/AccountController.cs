@@ -163,7 +163,7 @@ namespace store_car_web_project.Controllers
             }
         }
         [HttpGet]
-        [Authorize]
+     //   [Authorize]
         public async Task<JsonResult> Logout()
         {
             try
@@ -195,7 +195,7 @@ namespace store_car_web_project.Controllers
             {
                 try
                 {
-                    List<Users> users = await _userServices.GetUserInfo(UserManger.Id);
+                    Users users = await _userServices.GetUserInfo(UserManger.Id);
                     if (users == null)
                         return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 
@@ -212,7 +212,7 @@ namespace store_car_web_project.Controllers
             {
                 try
                 {
-                    List<Users> users = await _userServices.GetUserInfo(user_idManger);
+                   Users users = await _userServices.GetUserInfo(user_idManger);
                     if (users == null)
                         return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية جلب البيانات" });
 

@@ -33,5 +33,6 @@ namespace store_car_web_project.Models.Entity.Security
         public bool isliked { get; set; }
         public string imagepath { get; set; }
         public int imagecount { get; set; }
+        public bool Isonline { get; set; }
     }
 }

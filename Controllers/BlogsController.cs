@@ -466,7 +466,7 @@ namespace store_car_web_project.Controllers
             
             try
             { 
-                Posts posts1 = await _postsServices.CheckAccount(post_id);
+                Posts posts1 = await _postsServices.Checkpost(post_id);
                 if (posts1 == null)
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية التعليق" });
 
@@ -517,7 +517,7 @@ namespace store_car_web_project.Controllers
         {
             try
             {
-                Posts posts1 = await _postsServices.CheckAccount(post_id);
+                Posts posts1 = await _postsServices.Checkpost(post_id);
                 if (posts1 == null)
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية الاعجاب" });
                 Posts like = await _postsServices.checklike(post_id, UserManger.Id);
@@ -578,7 +578,7 @@ namespace store_car_web_project.Controllers
         {
             try
             {
-                Posts posts1 = await _postsServices.CheckAccount(post_id);
+                Posts posts1 = await _postsServices.Checkpost(post_id);
                 if (posts1 == null)
                     return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية الحذف" });
 
@@ -591,6 +591,26 @@ namespace store_car_web_project.Controllers
             {
                 await log.WriteAsync(ex, " BlogsController => delete_post");
                 return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية حذف المنشور" });
+            }
+        }
+        [HttpDelete]
+        public async Task<JsonResult> Deletenotifcation(int notifcation_id)
+        {
+            try
+            {
+                Notification notification = await _postsServices.Checknot(notifcation_id);
+                if (notification == null)
+                    return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية الحذف" });
+
+                _context.Entry(notification).State = EntityState.Deleted;
+                await _context.SaveChangesAsync();
+
+                return Json(new { success = true, msg = "تم حذف الاشعار بنجاح  " });
+            }
+            catch (Exception ex)
+            {
+                await log.WriteAsync(ex, " BlogsController => Deletenotifcation");
+                return Json(new { success = false, msg = "عذرا حدث خطا اثناء عملية حذف الاشعار" });
             }
         }
 

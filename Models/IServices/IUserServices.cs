@@ -13,7 +13,7 @@ namespace store_car_web_project.Models.IServices
         public Task<Users> CheckUserinfo(string username, string Email);
         public Task<Users> checkConfirmAccount(string code,string username, string Email);
         public List<Users> getusers();
-        public Task<List<Users>> GetUserInfo(int Id);
+        public Task<Users> GetUserInfo(int Id);
 
     }
 }

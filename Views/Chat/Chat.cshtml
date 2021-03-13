@@ -3,13 +3,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <section style="position:fixed; top:0; left:0; width:100%;">
-    <div class="container" style="width:60%; ">
+    <div class="chatwidth" style="">
         <div class="text-center price-title wow fadeInDown">
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                     <a class="" onclick="call_Action('Home/Index')"><i class='icon tf-ion-arrow-left-c' style="font-size:175%;"></i></a>
                 </div>
-                <div id="userchatinfoid" class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="margin-left:30%">
+                <div id="userchatinfoid" class="col-lg-9 col-md-9 col-sm-9 col-xs-9 " style="margin-left:30%">
                    
                 </div>
             </div>
@@ -20,31 +20,61 @@
     .dr {
         border-radius: 15px;
         background-color: #2f383d;
-        width: 40%;
-        margin-left: 60%;
-        float: left;
+        /* width: 40%;*/
+        /*margin-left: 60%;*/
+        max-width: 40%;
+        margin-bottom: 4px;
+        float: right;
         padding: 1%;
         color: #ddd;
+        text-align: right;
     }
 
     .dl {
         border-radius: 15px;
         background-color: #57cbcc;
-        width: 40%;
+        /*   width: 40%;*/
+        max-width: 40%;
+        margin-bottom: 4px;
         margin-right: 60%;
         float: left;
         padding: 1%;
         color: #fff;
+        text-align: right;
+    }
+    .r {
+        float: right;
+        width: 100%;
+    }
+    .l {
+        float: left;
+        width: 100%;
+    }
+    .btntrash {
+        float: right;
+        margin-right: 3%;
+        display: none;
+    }
+    .date{
+        display:none;
+    }
+    .check {
+        font-size: 150%;
+        /* font-weight: bold;
+        color: #57cbcc; 
+        margin-top: 2%;*/
+        float: right;
+        margin-left: 3%;
     }
 </style>
-<section style="margin-top: 8%; margin-bottom: 8%;">
-    <div id="messges" class="container" style="width: 58%;  height: 90%;  overflow: visible; background-color: transparent;">
-       
+<section class="session_chat">
+    <div id="messges" class="chatmassagewidth container text-center" style=" height: 90%;   overflow: visible; background-color: transparent;">
+
     </div>
 </section>
 <section style="position:fixed; top:88%; left:0px; width:100%;">
-    <div class="container" style="width:60%;">
-        <div class="text-center price-title">
+    <div class="chatwidth" style="">
+        <div class="text-center price-title ">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                     <input style="margin-left:10%; border:1px solid #ffffff" type="text" placeholder=".....اكتب رسالتك " class="bo form-control text-right" autocomplete="off" name="messagetext" id="messagetext" />
@@ -58,11 +88,30 @@
 </section>
 <div id="mydiv">
     <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat); 
+            }
+        }
         $(document).ready(function () {
             call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat);
+            call_ajax("POST", "Chat/SetSeenMessage", null, null);
             var o = { i: 2 }
+
             call_ajax("GET", "Account/GetUserInfo", o, userchatinfo);
         });
+        var input = document.getElementById("messagetext");
+
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+              //  document.getElementById("sendmessage").click();
+                $("#sendmessage").click();
+            }
+        });
+        
         $("#sendmessage").on("click", (e) => {
             e.preventDefault();
             var object = {

@@ -19,9 +19,13 @@ namespace store_car_web_project.Models.Services
             _noteService = new MasterService<Notification>();
             _imageService = new MasterService<Images>();
         }
-        public async Task<Posts> CheckAccount(int post_id)
+        public async Task<Posts> Checkpost(int post_id)
         {
             return await _postService.GetEntityAsync("security.post_checkAccount", new { post_id });
+        }
+        public async Task<Notification> Checknot(int id)
+        {
+            return await _noteService.GetEntityAsync("security.Checknot", new { id });
         }
         public async Task<Posts> checklike(int post_id,int user_id)
         {

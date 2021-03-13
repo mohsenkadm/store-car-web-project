@@ -155,6 +155,7 @@ connection.on('displaymessage', function () {
     call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat);
     setCountMessage();
 });
+
 connection.start();
 function datw(data) {
     if (data.length === 0) {
@@ -164,8 +165,12 @@ function datw(data) {
     $.each(data, function (i, item) {
         console.log(data);
         var islike = '#fff';
+        var online = '';
         if (item.isliked === true) {
             islike = '#57cbcc';
+        }
+        if (item.isonline === true) {
+            online = '<i class="tf-ion-ios-circle-filled onlineradio"></i>';
         }
         //debugger;
         var typeimage;
@@ -197,7 +202,7 @@ function datw(data) {
             "<div  class='post-block' style='border-radius: 15px;'>" +
             " <div class='content' >" +
             " <div class='price-title text-right' style='padding:0px;' >" +
-            "<h2><a onclick=\"call_Action(\'Blogs/profileUser/" + item.user_id +"')\"> "+ item.userName + "</a></h2>" +
+            "<h2> " + online + "<a onclick=\"call_Action(\'Blogs/profileUser/" + item.user_id + "')\"> " + item.userName + "</a></h2>" +
             " <br/>" +
             " <h3>" + item.title + " </h3>" +
             " <span style='float:none;'> " + item.date + "/ تاريخ النشر  </span>" +
@@ -243,8 +248,12 @@ function datprofile(data) {
     }
     $.each(data, function (i, item) {
         var islike = '#fff';
+        var online = '';
         if (item.isliked === true) {
             islike = '#57cbcc';
+        }
+        if (item.isonline === true) {
+            online = '<i class="tf-ion-ios-circle-filled onlineradio"></i>';
         }
         var typeimage;
         var str = 'images/imag_post/' + item.imagepath;
@@ -276,7 +285,7 @@ function datprofile(data) {
             "<div  class='post-block' style='border-radius: 15px;'>" +
             " <div class='content' >" +
             " <div class='price-title text-right' style='padding:0px;' >" +
-            "<h2><a >" + item.userName + "</a></h2>" +
+            "<h2>" + online + "<a >" + item.userName + "</a></h2>" +
             " <br />" +
             " <h3>" + item.title + " </h3>" +
             " <span style='float:none;'> " + item.date + " / تاريخ النشر  </span>" +
@@ -365,8 +374,9 @@ function note(data) {
             color = "#353b43";
         }
         if (item.type_note === 1) {
-            var rows = "<div  class='price-title text-right' style='background:" + color + ";' >" + "<div class='row' style='margin-right: 0px;'>" +
-                "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a onclick=\"call_Action(\'Blogs/Notifecation/" + item.post_id +"',1)\"  class='btn btn-transparent' > عرض المنشور</a>" + "</div> "
+            var rows = "<div id='" + item.id + "note'   class='price-title text-right' style='background:" + color + ";' >" + "<div class='row' style='margin-right: 0px;'>" +
+                "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletenot(" + item.id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
+                + "<a onclick=\"call_Action(\'Blogs/Notifecation/" + item.post_id + "',1)\" style='padding: 7px 11px; border-radius: 50%;     margin-left: 7%;'  class='btn btn-transparent' > <i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i></a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
                 "<p>" + item.userName + " تم الاعجاب على منشورك من قبل </p>" +
                 +" <span style = 'float:none;' >" + item.date + "/ تاريخ الاشعار  </span>"
@@ -374,8 +384,9 @@ function note(data) {
                 "</div>" + "</div>";
         }
         else {
-            var rows = "<div  class='price-title text-right' style='background:" + color + ";'>" + "<div class='row' style='margin-right: 0px;'>" +
-                "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"call_Action(\'Blogs/Notifecation/" + item.post_id +"',1)\" class='btn btn-transparent' >عرض المنشور</a>" + "</div> "
+            var rows = "<div id='" + item.id + "note'  class='price-title text-right' style='background:" + color + ";'>" + "<div class='row' style='margin-right: 0px;'>" +
+                "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletenot(" + item.id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
+                + "<a  onclick =\"call_Action(\'Blogs/Notifecation/" + item.post_id + "',1)\" style='padding: 7px 11px; border-radius: 50%; margin-left: 7%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i></a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
                 "<p>" + item.userName + " تم التعليق على منشورك من قبل </p>" +
                 +" <span style = 'float:none;' >" + item.date + "/ تاريخ الاشعار  </span>"
@@ -387,6 +398,15 @@ function note(data) {
     });
     call_ajax("POST", "Blogs/SetNotification", null, SetCountNot);
 };
+
+function deletenot(id) {
+    var object = {
+        notifcation_id: id,
+    };
+    call_ajax("DELETE", "Blogs/Deletenotifcation", object, null);
+    var id = "#" + id + 'note';
+    $(id).fadeOut();
+}
 function message(data) {
     $('#message').empty();
     console.log(data);
@@ -400,8 +420,9 @@ function message(data) {
         if (seen2) {
             color = "#353b43";
         }
-            var rows = "<div  class='price-title text-right' style='background:" + color + ";' >" + "<div class='row' style='margin-right: 0px;'>" +
-            "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a data-dismiss='modal' onclick=\"call_Action(\'Chat/Chat/" + item.user_sender_id +"')\"  class='btn btn-transparent' >عرض الرسالة </a>" + "</div> "
+        var rows = "<div id='" + item.user_sender_id + "div1' class='price-title text-right' style='background:" + color + ";' >" + "<div class='row' style='margin-right: 0px;'>" +
+            "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletemessages(" + item.user_sender_id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
+                + "<a data-dismiss='modal' onclick=\"call_Action(\'Chat/Chat/" + item.user_sender_id +"')\"  style='padding: 7px 11px; border-radius: 50%; margin-left: 7%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i> </a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
                 "<p>" + item.user_name_s + " تم ارسال رسالة اليك من قبل </p>" 
                 + "<p style='float:none;' >" + item.message_txt + " </p>"
@@ -412,40 +433,111 @@ function message(data) {
     });
     call_ajax("POST", "Chat/SetCountMessage", null, setCountMessage);
 };
+function deletemessages(id) {
+    var object = {
+         user_id:id,
+    };
+    call_ajax("DELETE", "Chat/RemoveMessages", object, null);
+    var id ="#"+ id + 'div1';
+    $(id).fadeOut();
+}
+
+function GetMessagechat(data) {
+    if (data.length === 0) {
+        toust.error("لا توجد رسائل الى الان");
+        return;
+    }
+    var rows;
+    $('#messges').empty();
+    rows = "<div class=' text-center'><a  id='" + data.id + "'  class='btn btn-transparent' style='margin-top: 10px; margin-bottom: 20px;'  >عرض المزيد من الرسائل</a><div/>";
+    $('#messges').append(rows);
+    rows = "";
+    console.log(data.id);
+    $.each(data, function (i, item) {
+
+        if (item.reciver === true) {
+            rows = "<div class=' l'>" + "<div class='dl col' onclick=\"visiblebtn(\'#" + item.id + "btn','#" + item.id + "date')\"> <label> " + item.message_txt + "</label> </div></div>" +
+                " <span style='float:left;'  class='date' id='" + item.id + "date'>" + item.message_date + "/تاريخ الارسال </span>";
+        }
+        else {
+            var styleseenoutline = 'display:none;';
+            var styleseeninline = 'display:none;';
+            if (item.seen) {
+                styleseenoutline = 'display:none;';
+                styleseeninline = 'display:inline;';
+            }
+            else {
+                styleseenoutline = 'display:inline;';
+                styleseeninline = 'display:none;';
+            }
+            rows = "<div class='row r'  id='" + item.id + "div'>" + "<a  id='" + item.id + "checkmark' style='" + styleseeninline + "' class='tf-ion-ios-checkmark check'></a> " +
+                "<a id='" + item.id + "checkmarkoutline' style='" + styleseenoutline + "'  class='tf-ion-ios-checkmark-outline check '></a> " +
+                " <div class='row dr' onclick=\"visiblebtn(\'#" + item.id + "btn','#" + item.id + "date')\"> <label class='col' >" + item.message_txt + "</label>    </div>" +
+                "<div id='" + item.id + "btn' class='col btntrash'>" +
+                " <a onclick=\"deletemessage(" + item.id + ")\"  style='padding: 7px 11px;  border-radius: 50%;' class='  btn btn-transparent'><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>" +
+                " </div>" +
+                "</div>" +
+                "<span class='date' id='" + item.id + "date' style='float:right;'>" + item.message_date + " /تاريخ الارسال </span>";
+        }
+
+        $('#messges').append(rows);
+    });
+    window.scrollTo(0, document.body.scrollHeight);
+}
+function deletemessage(id_message) {
+    var object = {
+        id: id_message,
+    };
+    call_ajax("DELETE", "Chat/RemoveMessage", object, null);
+
+    var iddiv = "#" + id_message + 'div';
+    var iddate = "#" + id_message + 'date';
+    $(iddiv).fadeOut();
+    $(iddate).fadeOut();
+}
+
 function userchatinfo (data) {
     $('#userchatinfoid').empty();
-    $.each(data, function (i, item) {
-        var rows = "<h3 style='margin-top: -32px;'>" + item.userName + " </h3>" +
+    var online = '';
+    if (data.isonline === true) {
+         online = '<i style="margin-right: 2%;" class="tf-ion-ios-circle-filled onlineradio"></i>';
+    }
+    //$.each(data, function (i, item) {
+    var rows = "<h3 style='margin-top: -32px;'>" +online+ data.userName + " </h3>" +
         "<div class='clearfix' style='float:none;'>" +
-            "       <span style='float:none;'>" + item.email + " / ايميل </span>" +
+        "       <span style='float:none;'>" + data.email + " / ايميل </span>" +
             " <i class='tf-ion-ios-email-outline' style='float:none;'></i>" +
             "  </div>";
         $('#userchatinfoid').append(rows);
-    });
+    //});
 };
 function userinfo(data) {
     $('#info').empty();
-    $.each(data, function (i, item) {
+    var online = '';
+    if (data.isonline === true) {
+        online = '<i style="margin-right: 2%;" class="tf-ion-ios-circle-filled onlineradio"></i>';
+    }
+        //$.each(data, function (i, item) {
         var rows = "  <div class='price-title text-right' style='background-color:#171a1d'>" +
-            "  <h3> " + item.userName + " / الأسم </h3 >" +
+            "  <h3> "  +online + data.userName + " / الأسم </h3 >" +
             "  <br />" +
             "<div class='con-info clearfix text-right' style='float:none;'>" +
-            "       <span style='float:none;'>" + item.email + " / ايميل </span>" +
+            "       <span style='float:none;'>" + data.email + " / ايميل </span>" +
             " <i class='tf-ion-ios-email-outline' style='float:none;'></i>" +
             "  </div>" +
             "  <div class='con-info clearfix text-right' style='float:none;'>" +
-            "  <span style='float:none;'>" + item.counts + "/ عدد المنشورات  </span>" +
+            "  <span style='float:none;'>" + data.counts + "/ عدد المنشورات  </span>" +
             "   </div>" +
             "  </div >";
         $('#info').append(rows);
-    });
+    //});
 };
 var state = {
     'querySet': null, //
     'page': 1,
     'rows': 5,
     'window': 7,
-}
+} 
 function pagination(querySet, page, rows) {
     var trimStart = (page - 1) * rows
     var trimEnd = trimStart + rows
@@ -493,7 +585,6 @@ function pageButtons(pages, i) {
             var o = { i: 1 }
             call_ajax("GET", "Blogs/GetPostsProfile", o, buildTableprofile);
         }
-
         else if(i===3){
             var o = { i: 2 }
             call_ajax("GET", "Blogs/GetPostsProfile", o, buildTableprofileuser);
@@ -502,7 +593,7 @@ function pageButtons(pages, i) {
 
 }
 function buildTable(data) {
-    state.page = 1;
+    //state.page = 1;
     state.querySet = data;
     var dat = pagination(state.querySet, state.page, state.rows);
     datw(dat.querySet);
@@ -585,15 +676,18 @@ function GetNotification() {
 };
 function GetMessage() {
     call_ajax("GET", "Chat/GetMessage", null, message);
+
 };
 function logut() {
    
-    document.cookie = "token1= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+    
+    call_ajax("Get", "Account/Logout", null, afterlogout);
+};
+function afterlogout() {
+    document.cookie = "token1= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
     call_Action("home/index")
   
-    call_ajax("Get", "Account/Logout", null, null);
- 
-};
+}
 function SetCountNotifaction(data) {
     //debugger;
     if (data.count< 0) {
@@ -619,31 +713,26 @@ function SetCountMessage(data) {
         document.getElementById('GetCountMessage').innerText = data.count;
     }
 };
+function visiblebtn(idbtn,iddate) {
+    if ($(idbtn).is(":visible")) {
+        $(idbtn).fadeOut();
+    }
+    else {
+        $(idbtn).fadeIn();
+    }
+    if ($(iddate).is(":visible")) {
+     
+        $(iddate).fadeOut();
+    }
+    else {
+       
+        $(iddate).fadeIn();
+    }
+}
 function setCountMessage() {
     call_ajax("GET", "Chat/GetCountMessage", null, SetCountMessage);
 }
 
-function GetMessagechat(data) {
-    if (data.length === 0) {
-        toust.error("لا توجد رسائل الى الان");
-        return;
-    }
-    var rows;
-    $('#messges').empty();
-    $.each(data, function (i, item) {
-
-        if (item.reciver === true) {
-            rows = "<div class='dl'>" + "<label> " + item.message_txt + "</label>" +
-                "</div>" + " <span style='float:left;'>" + item.message_date+"/تاريخ الارسال </span>";
-        }
-        else {
-            rows = "<div class='dr'>" + " <label>" + item.message_txt+"</label>"+
-                "</div>" + "<span style='float:right;'>" + item.message_date +" /تاريخ الارسال </span>";
-        }
-        $('#messges').append(rows);
-    });
-    window.scrollTo(0, document.body.scrollHeight);
-}
 function upluad(data) {
     UploadFile(data.post_id);
 }
