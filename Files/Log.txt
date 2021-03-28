@@ -366,3 +366,27 @@ Index and count must refer to a location within the string. (Parameter 'count')
 
 ------------------------------------
 
+Send Mail	3/13/2021 6:18:28 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+
+ Account => Register	3/13/2021 6:18:28 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+
+Send Mail	3/13/2021 6:21:16 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+
+ Account => Register	3/13/2021 6:21:16 PM
+
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+
+------------------------------------
+

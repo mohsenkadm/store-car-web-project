@@ -349,15 +349,17 @@ function command(data) {
     var row = "<div class='clearfix'>" +
         "<div class='col-lg-9 col-md-9 col-sm-9 col-xs-8' >" +
         " <div class='form-group'>" +
-        "<input placeholder='اكتب تعليقك'  class='bo form-control text-right' autocomplete='off' name='commend' id='commend' />" +
+        "<input placeholder='اكتب تعليقك' type='text' class='bo form-control text-right' autocomplete='off' name='commendinput' id='commendinput' />" +
         " </div>" +
         "</div >" +
         "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2'>" +
-        "<button type='button'   onclick='postcommends()'  class='btn btn-transparent' >  نشر </button>" +
+        "<button type='button'  name='commendbtn' id='commendbtn' onclick='postcommends()'  class='btn btn-transparent' >  نشر </button>" +
         " </div>" +
         "</div >";
     $('#commands').append(row);
 };
+//event enter commend
+
 function note(data) {
     $('#note').empty();
     console.log(data);
@@ -367,9 +369,7 @@ function note(data) {
     }
     $.each(data, function (i, item) {
         
-        var color = "#292F36";
-       
-        var seen1 = item.seen;
+        var color = "#292F36";        var seen1 = item.seen;
         if (seen1) {
             color = "#353b43";
         }
@@ -659,9 +659,10 @@ function setcommend(data) {
     document.getElementById('setcommend' + data.post_id).innerText = data.count_comment;
     getcommends(id1);
 };
+
 function postcommends() {
     var object = {
-        commend: $("#commend").val(),
+        commend: $("#commendinput").val(),
         post_id: id1,
     };
     if (object.commend === "" || object.commend.trim() === "") {

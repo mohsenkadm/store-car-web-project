@@ -88,13 +88,13 @@
 </section>
 <div id="mydiv">
     <script>
-        window.onscroll = function () { myFunction() };
+      //  window.onscroll = function () { myFunction() };
 
-        function myFunction() {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat); 
-            }
-        }
+        //function myFunction() {
+        //    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        //        call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat); 
+        //    }
+        //}
         $(document).ready(function () {
             call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat);
             call_ajax("POST", "Chat/SetSeenMessage", null, null);
