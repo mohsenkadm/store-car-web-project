@@ -159,7 +159,7 @@ connection.on('displaymessage', function () {
 connection.start();
 function datw(data) {
     if (data.length === 0) {
-        toust.error("لا توجد منشورات");
+        toust.error("There are no posts");
         return;
     }
     $.each(data, function (i, item) {
@@ -182,7 +182,7 @@ function datw(data) {
                 " </div>" +
                 "</div>" +
                 "<div style='text-align: center;'> <a class='btn btn-main'  onclick =\"call_ajax('GET', 'Blogs/Getimages/" + item.post_id +"', null, buildimage)\" data-toggle='modal' data-target='#imageall'  data-effect='mfp-with-zoom' data-scroll>" +
-                "  " + item.imagecount + "+ عرض المزيد من الصور" +
+                "  " + item.imagecount + "+ View more photos" +
                 "</a> </div>";
         } else {
             typeimage = " <div class='filtr-item '>" +
@@ -192,7 +192,7 @@ function datw(data) {
                 " <a class='search-icon image-popup' onclick =\"setimageinsidemodel(\'" + str + "')\" data-toggle='modal' data-target='#image'  data-effect='mfp-with-zoom' data-scroll>" +
                 "   <i class='tf-ion-android-search'></i>" +
                 "</a>" +
-                " <h4>تكبير الصورة</h4>" +
+                " <h4>Zoom in the picture</h4>" +
                 " </div>" +
                 " </div>" +
                 "</div>";
@@ -205,29 +205,29 @@ function datw(data) {
             "<h2> " + online + "<a onclick=\"call_Action(\'Blogs/profileUser/" + item.user_id + "')\"> " + item.userName + "</a></h2>" +
             " <br/>" +
             " <h3>" + item.title + " </h3>" +
-            " <span style='float:none;'> " + item.date + "/ تاريخ النشر  </span>" +
-            " <p><strong class='value'>$" + item.price + "</strong>/ السعر</p>" +
-            " <p><strong class='value'>" + item.model + "</strong>/الموديل</p>" +
+            " <span style='float:none;'> " + item.date + "/ date of publication </span>" +
+            " <p><strong class='value'>$" + item.price + "</strong>/ price</p>" +
+            " <p><strong class='value'>" + item.model + "</strong>/Model</p>" +
             "  <p>الشركة \ " + item.company_id + "</p>" +
             " <div class='con-info clearfix text-right' style='float:none;'>" +
             "  <span style='float:none;'>" + item.address + "</span>" +
             "    <i class='tf-map-pin' style='float:none;'></i>" +
             "</div>" +
             " <div class='con-info clearfix text-right' style='float:none;'>" +
-            "   <span style='float:none;'>" + item.phone + " /رقم الهاتف </span>" +
+            "   <span style='float:none;'>" + item.phone + " /Telephone number </span>" +
             "  <i class='tf-ion-ios-telephone-outline' style='float:none;'></i>" +
             " </div>" +
             "</div >" +
             "<p class='text-right'>" + item.commend + "</p>" + "</div >" +
             typeimage+
             "<div class='divdown'>" +
-            "  <span data-toggle='modal' id='like_count'  onclick='getlikes(" + item.post_id + ")' data-target='#likemodel' style='float: right; cursor:pointer;'><a class='value1' id='setlike" + item.post_id + "'>" + item.count_like + "</a> اعجابات </span>" +
-            " <span data-toggle='modal' id='command_count'  onclick='getcommends(" + item.post_id + ")' data-target='#commentmodel' style=' cursor:pointer;'> <a class='value1' id='setcommend" + item.post_id + "'>" + item.count_comment + "</a> تعليقات </span>" +
+            "  <span data-toggle='modal' id='like_count'  onclick='getlikes(" + item.post_id + ")' data-target='#likemodel' style='float: right; cursor:pointer;'><a class='value1' id='setlike" + item.post_id + "'>" + item.count_like + "</a> Likes </span>" +
+            " <span data-toggle='modal' id='command_count'  onclick='getcommends(" + item.post_id + ")' data-target='#commentmodel' style=' cursor:pointer;'> <a class='value1' id='setcommend" + item.post_id + "'>" + item.count_comment + "</a> Comments </span>" +
             " </div>" +
-            " <button class='btn2 btn  '  type='button'  onclick=\"call_Action(\'Chat/Chat/" + item.user_id +"')\"  style=' float:left;  '>تواصل <i class='icon tf-ion-ios-chatbubble-outline'></i></button>" +
-            "<button class='btn2 btn '  type='button'  onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' > تعليق <i class='icon tf-ion-ios-chatbubble-outline'></i>   </button>" +
-            "<button type='button' id='btnlike" + item.post_id + "' style='color:" + islike + ";float: right;' onclick='postlike(" + item.post_id + ")' class='btn2 btn ' >  اعجبني <i class='icon tf-ion-thumbsup'></i> </button>"
-            + "<label onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' style='width:95%; margin-left:10px; margin-right:10px; border-radius:20px; background-color:#353b43; text-align: right; padding:7px; padding-right:18px;' > ... اكتب تعليقك </label>" +
+            " <button class='btn2 btn  '  type='button'  onclick=\"call_Action(\'Chat/Chat/" + item.user_id +"')\"  style=' float:left;  '>Communication <i class='icon tf-ion-ios-chatbubble-outline'></i></button>" +
+            "<button class='btn2 btn '  type='button'  onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' > Suspension <i class='icon tf-ion-ios-chatbubble-outline'></i>   </button>" +
+            "<button type='button' id='btnlike" + item.post_id + "' style='color:" + islike + ";float: right;' onclick='postlike(" + item.post_id + ")' class='btn2 btn ' >  Like <i class='icon tf-ion-thumbsup'></i> </button>"
+            + "<label onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' style='width:95%; margin-left:10px; margin-right:10px; border-radius:20px; background-color:#353b43; text-align: right; padding:7px; padding-right:18px;' >Write your comment.... </label>" +
             "</div>" +
             " </article>";
         $('#posts').append(rows);
@@ -243,7 +243,7 @@ function setimageinsidemodel(image) {
 };
 function datprofile(data) {
     if (data.length === 0) {
-        toust.error("لا توجد منشورات");
+        toust.error("There are no posts");
         return;
     }
     $.each(data, function (i, item) {
@@ -264,7 +264,7 @@ function datprofile(data) {
                 " </div>" +
                 "</div>" +
                 "<div style='text-align: center;'> <a class='btn btn-main'  onclick =\"call_ajax('GET', 'Blogs/Getimages/" + item.post_id + "', null, buildimage)\" data-toggle='modal' data-target='#imageall'  data-effect='mfp-with-zoom' data-scroll>" +
-                "  " + item.imagecount + "+ عرض المزيد من الصور" +
+                "  " + item.imagecount + "+ View more photos" +
                 "</a> </div>";
         } else {
             typeimage = " <div class='filtr-item '>" +
@@ -274,7 +274,7 @@ function datprofile(data) {
                 " <a class='search-icon image-popup' onclick =\"setimageinsidemodel(\'" + str + "')\" data-toggle='modal' data-target='#image'  data-effect='mfp-with-zoom' data-scroll>" +
                 "   <i class='tf-ion-android-search'></i>" +
                 "</a>" +
-                " <h4>تكبير الصورة</h4>" +
+                " <h4>Zoom in the picture</h4>" +
                 " </div>" +
                 " </div>" +
                 "</div>";
@@ -288,29 +288,29 @@ function datprofile(data) {
             "<h2>" + online + "<a >" + item.userName + "</a></h2>" +
             " <br />" +
             " <h3>" + item.title + " </h3>" +
-            " <span style='float:none;'> " + item.date + " / تاريخ النشر  </span>" +
-            " <p><strong class='value'>$" + item.price + "</strong>/ السعر</p>" +
-            " <p><strong class='value'>" + item.model + "</strong>/الموديل</p>" +
-            "  <p>الشركة \ " + item.company_id + "</p>" +
+            " <span style='float:none;'> " + item.date + " / date of publication  </span>" +
+            " <p><strong class='value'>$" + item.price + "</strong>/ price</p>" +
+            " <p><strong class='value'>" + item.model + "</strong>/Model</p>" +
+            "  <p>The company \ " + item.company_id + "</p>" +
             " <div class='con-info clearfix text-right' style='float:none;'>" +
             "  <span style='float:none;'>" + item.address + "</span>" +
             "    <i class='tf-map-pin' style='float:none;'></i>" +
             "</div>" +
             " <div class='con-info clearfix text-right' style='float:none;'>" +
-            "   <span style='float:none;'>" + item.phone + " /رقم الهاتف </span>" +
+            "   <span style='float:none;'>" + item.phone + " /Telephone number </span>" +
             "  <i class='tf-ion-ios-telephone-outline' style='float:none;'></i>" +
             " </div>" +
             "</div >" +
             "<p class='text-right'>" + item.commend + "</p>" + "</div >" +
             typeimage +
             "<div class='divdown'>" +
-            "  <span data-toggle='modal' id='like_count'  onclick='getlikes(" + item.post_id + ")' data-target='#likemodel' style='float: right; cursor:pointer;'><a class='value1' id='setlike" + item.post_id + "'>" + item.count_like + "</a> اعجابات </span>" +
-            " <span data-toggle='modal' id='command_count'  onclick='getcommends(" + item.post_id + ")' data-target='#commentmodel' style=' cursor:pointer;'> <a class='value1' id='setcommend" + item.post_id + "'>" + item.count_comment + "</a> تعليقات </span>" +
+            "  <span data-toggle='modal' id='like_count'  onclick='getlikes(" + item.post_id + ")' data-target='#likemodel' style='float: right; cursor:pointer;'><a class='value1' id='setlike" + item.post_id + "'>" + item.count_like + "</a> Likes </span>" +
+            " <span data-toggle='modal' id='command_count'  onclick='getcommends(" + item.post_id + ")' data-target='#commentmodel' style=' cursor:pointer;'> <a class='value1' id='setcommend" + item.post_id + "'>" + item.count_comment + "</a> Comments </span>" +
             " </div>" +
-            "   <button type='button' id='promet_btn'  class='btn btn-transparent'  data-toggle='modal' data-target='#promotmodel'  style=' border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px; width: 33%; '> <i style='margin-right:10%;'  class='tf-megaphone'></i> ترويج المنشور </button>" +
-            "   <button type='button' id='delete_btn' onclick='delete_btn(" + item.post_id + ")' class='btn btn-transparent'  style=' border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px;width:33%; '> <i style='font-size: 120%;margin-right:10%;' class='tf-ion-trash-b'></i> حذف المنشور </button>" +
-            " <button type='button' id='update_btn' onclick='update_btn(" + item.post_id + ")' class='btn btn-transparent' style = 'border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px; float: right; width: 33%;' > <i style='margin-right:10%;' class='tf-pencil2'></i> تعديل المنشور  </button >"
-            + "<label onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' style='width:95%; margin-left:10px; margin-right:10px; border-radius:20px; background-color:#353b43; text-align: right; padding:7px; padding-right:18px;' > ... اكتب تعليقك </label>" +
+            "   <button type='button' id='promet_btn'  class='btn btn-transparent'  data-toggle='modal' data-target='#promotmodel'  style=' border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px; width: 33%; '> <i style='margin-right:10%;'  class='tf-megaphone'></i> Promote your post</button>" +
+            "   <button type='button' id='delete_btn' onclick='delete_btn(" + item.post_id + ")' class='btn btn-transparent'  style=' border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px;width:33%; '> <i style='font-size: 120%;margin-right:10%;' class='tf-ion-trash-b'></i> Delete the post</button>" +
+            " <button type='button' id='update_btn' onclick='update_btn(" + item.post_id + ")' class='btn btn-transparent' style = 'border:0px; border-top: 1px solid #4e595f; border-bottom: 1px solid #4e595f; margin-bottom: 10px; float: right; width: 33%;' > <i style='margin-right:10%;' class='tf-pencil2'></i> Edit post  </button >"
+            + "<label onclick='getcommends(" + item.post_id + ")'   data-toggle='modal' data-target='#commentmodel' style='width:95%; margin-left:10px; margin-right:10px; border-radius:20px; background-color:#353b43; text-align: right; padding:7px; padding-right:18px;' > Write your comment..... </label>" +
             "</div>" +
             " </article>";
 
@@ -320,26 +320,26 @@ function datprofile(data) {
 function likes(data) {
     $('#like').empty();
     if (data.length === 0) {
-        toust.error("لا توجد اعجابات");
+        toust.error("There are no likes");
         return;
     }
     $.each(data, function (i, item) {
         var url = '/Blogs/profileUser/' + item.user_id;
         var rows = " <h3><a onclick=\"call_Action(\'Blogs/profileUser/" + item.user_id + "',3)\"> " + item.userName + "</a></h3>" +
-            +"<span style = 'float:none;' > " + item.date + "/ تاريخ الاعجاب  </span>";
+            +"<span style = 'float:none;' > " + item.date + "/Date of admiration </span>";
         $('#like').append(rows);
     });
 };
 function command(data) {
     $('#commands').empty();
     if (data.length === 0) {
-        toust.error("لا توجد تعليقات");
+        toust.error("There are no comments");
     }
     $.each(data, function (i, item) {
         var url = '/Blogs/profileUser/' + item.user_id;
         var rows = "<div class='price-title text-right'>" +
             " <h3><a onclick=\"call_Action(\'Blogs/profileUser/" + item.user_id + "',2)\"> " + item.userName + "</a></h3>" +
-            "   <span style='float:none;'> " + item.date + "/ تاريخ النشر التعليق  </span>" +
+            "   <span style='float:none;'> " + item.date + "/ Posted Date Comment  </span>" +
             "</div>" +
             " <p style='padding: 1%;background-color:#292F36;' class=' text-right'>" + item.commend
         " </p>";
@@ -349,27 +349,27 @@ function command(data) {
     var row = "<div class='clearfix'>" +
         "<div class='col-lg-9 col-md-9 col-sm-9 col-xs-8' >" +
         " <div class='form-group'>" +
-        "<input placeholder='اكتب تعليقك'  class='bo form-control text-right' autocomplete='off' name='commend' id='commend' />" +
+        "<input placeholder='Write your comment' type='text' class='bo form-control text-right' autocomplete='off' name='commendinput' id='commendinput' />" +
         " </div>" +
         "</div >" +
         "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2'>" +
-        "<button type='button'   onclick='postcommends()'  class='btn btn-transparent' >  نشر </button>" +
+        "<button type='button'  name='commendbtn' id='commendbtn' onclick='postcommends()'  class='btn btn-transparent' >  Spread </button>" +
         " </div>" +
         "</div >";
     $('#commands').append(row);
 };
+//event enter commend
+
 function note(data) {
     $('#note').empty();
     console.log(data);
     if (data.length === 0) {
-        toust.error("لا توجد اشعارات");
+        toust.error("There are no notifications");
         return;
     }
     $.each(data, function (i, item) {
         
-        var color = "#292F36";
-       
-        var seen1 = item.seen;
+        var color = "#292F36";        var seen1 = item.seen;
         if (seen1) {
             color = "#353b43";
         }
@@ -378,8 +378,8 @@ function note(data) {
                 "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletenot(" + item.id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
                 + "<a onclick=\"call_Action(\'Blogs/Notifecation/" + item.post_id + "',1)\" style='padding: 7px 11px; border-radius: 50%;     margin-left: 7%;'  class='btn btn-transparent' > <i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i></a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
-                "<p>" + item.userName + " تم الاعجاب على منشورك من قبل </p>" +
-                +" <span style = 'float:none;' >" + item.date + "/ تاريخ الاشعار  </span>"
+                "<p>" + item.userName + " Your post has been liked before </p>" +
+                +" <span style = 'float:none;' >" + item.date + "/ Notice Date  </span>"
                 + " </div>" +
                 "</div>" + "</div>";
         }
@@ -388,8 +388,8 @@ function note(data) {
                 "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletenot(" + item.id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
                 + "<a  onclick =\"call_Action(\'Blogs/Notifecation/" + item.post_id + "',1)\" style='padding: 7px 11px; border-radius: 50%; margin-left: 7%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i></a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
-                "<p>" + item.userName + " تم التعليق على منشورك من قبل </p>" +
-                +" <span style = 'float:none;' >" + item.date + "/ تاريخ الاشعار  </span>"
+                "<p>" + item.userName + " Your post has been previously commented on</p>" +
+                +" <span style = 'float:none;' >" + item.date + "/ Notice Date </span>"
                 + " </div>" +
                 "</div>" + "</div>";
         }
@@ -411,7 +411,7 @@ function message(data) {
     $('#message').empty();
     console.log(data);
     if (data.length === 0) {
-        toust.error("لا توجد رسايل");
+        toust.error("There are no messages");
         return;
     }
     $.each(data, function (i, item) {
@@ -424,9 +424,9 @@ function message(data) {
             "<div class='form-group col-md-3 col-sm-3 col-xs-3' > <a  onclick=\"deletemessages(" + item.user_sender_id + ")\" style='padding: 7px 11px; border-radius: 50%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>"
                 + "<a data-dismiss='modal' onclick=\"call_Action(\'Chat/Chat/" + item.user_sender_id +"')\"  style='padding: 7px 11px; border-radius: 50%; margin-left: 7%;' class='btn btn-transparent' ><i style='font-size: 177%;' class='tf-ion-ios-eye-outline'></i> </a>" + "</div> "
                 + "<div class='form-group col-md-9 col-sm-9 col-xs-9' >" +
-                "<p>" + item.user_name_s + " تم ارسال رسالة اليك من قبل </p>" 
+            "<p>" + item.user_name_s + " A message has been sent to you before</p>" 
                 + "<p style='float:none;' >" + item.message_txt + " </p>"
-                +"<span style='float:none;' >" + item.message_date + "/ تاريخ الرسالة  </span>"
+            + "<span style='float:none;' >" + item.message_date + "/ The date of the message </span>"
                 + "</div>" +
                 "</div>" + "</div>";
         $('#message').append(rows);
@@ -444,7 +444,7 @@ function deletemessages(id) {
 
 function GetMessagechat(data) {
     if (data.length === 0) {
-        toust.error("لا توجد رسائل الى الان");
+        toust.error("There are no messages yet");
         return;
     }
     var rows;
@@ -457,7 +457,7 @@ function GetMessagechat(data) {
 
         if (item.reciver === true) {
             rows = "<div class=' l'>" + "<div class='dl col' onclick=\"visiblebtn(\'#" + item.id + "btn','#" + item.id + "date')\"> <label> " + item.message_txt + "</label> </div></div>" +
-                " <span style='float:left;'  class='date' id='" + item.id + "date'>" + item.message_date + "/تاريخ الارسال </span>";
+                " <span style='float:left;'  class='date' id='" + item.id + "date'>" + item.message_date + "/Sending Date</span>";
         }
         else {
             var styleseenoutline = 'display:none;';
@@ -477,7 +477,7 @@ function GetMessagechat(data) {
                 " <a onclick=\"deletemessage(" + item.id + ")\"  style='padding: 7px 11px;  border-radius: 50%;' class='  btn btn-transparent'><i style='font-size: 177%;' class='tf-ion-trash-b'></i></a>" +
                 " </div>" +
                 "</div>" +
-                "<span class='date' id='" + item.id + "date' style='float:right;'>" + item.message_date + " /تاريخ الارسال </span>";
+                "<span class='date' id='" + item.id + "date' style='float:right;'>" + item.message_date + " /Sending Date </span>";
         }
 
         $('#messges').append(rows);
@@ -519,14 +519,14 @@ function userinfo(data) {
     }
         //$.each(data, function (i, item) {
         var rows = "  <div class='price-title text-right' style='background-color:#171a1d'>" +
-            "  <h3> "  +online + data.userName + " / الأسم </h3 >" +
+            "  <h3> " + online + data.userName + " / The name </h3 >" +
             "  <br />" +
             "<div class='con-info clearfix text-right' style='float:none;'>" +
-            "       <span style='float:none;'>" + data.email + " / ايميل </span>" +
+            "       <span style='float:none;'>" + data.email + " / email </span>" +
             " <i class='tf-ion-ios-email-outline' style='float:none;'></i>" +
             "  </div>" +
             "  <div class='con-info clearfix text-right' style='float:none;'>" +
-            "  <span style='float:none;'>" + data.counts + "/ عدد المنشورات  </span>" +
+            "  <span style='float:none;'>" + data.counts + "/ Number of publications  </span>" +
             "   </div>" +
             "  </div >";
         $('#info').append(rows);
@@ -659,13 +659,14 @@ function setcommend(data) {
     document.getElementById('setcommend' + data.post_id).innerText = data.count_comment;
     getcommends(id1);
 };
+
 function postcommends() {
     var object = {
-        commend: $("#commend").val(),
+        commend: $("#commendinput").val(),
         post_id: id1,
     };
     if (object.commend === "" || object.commend.trim() === "") {
-        toust.error("يرجى كتابة التعليق");
+        toust.error("Please write a comment");
         return;
     }
     call_ajax("POST", "Blogs/PostCommend", object, setcommend);
@@ -748,10 +749,10 @@ function UploadFile(id) {
         type: "POST", url: "/Blogs/UploadFileAsync/" + id, contentType: false, processData: false,
         data: data, async: false,
         success: function (message) {
-            toust.success("تم  تحميل الصور بنجاح");
+            toust.success("Images uploaded successfully");
         },
         error: function () {
-            toust.error("عذرا حدث خطا اثناء  تحميل الصور");
+            toust.error("Sorry, an error occurred while uploading the images");
         },
     });
 }

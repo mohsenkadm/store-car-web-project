@@ -77,7 +77,7 @@
         <div class="text-center price-title ">
             <div class="row">
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                    <input style="margin-left:10%; border:1px solid #ffffff" type="text" placeholder=".....اكتب رسالتك " class="bo form-control text-right" autocomplete="off" name="messagetext" id="messagetext" />
+                    <input style="margin-left:10%; border:1px solid #ffffff" type="text" placeholder="Type a message....." class="bo form-control text-right" autocomplete="off" name="messagetext" id="messagetext" />
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left:6%">
                     <a id="sendmessage" class="btn btn-transparent text-center" style="padding: 3px 5px 2px 2px; border-radius: 25px;"><i class='icon tf-ion-android-send' style="font-size: 175%;margin-left: 6px;"></i></a>
@@ -88,13 +88,13 @@
 </section>
 <div id="mydiv">
     <script>
-        window.onscroll = function () { myFunction() };
+      //  window.onscroll = function () { myFunction() };
 
-        function myFunction() {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat); 
-            }
-        }
+        //function myFunction() {
+        //    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        //        call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat); 
+        //    }
+        //}
         $(document).ready(function () {
             call_ajax("GET", "Chat/GetMessagechat", null, GetMessagechat);
             call_ajax("POST", "Chat/SetSeenMessage", null, null);

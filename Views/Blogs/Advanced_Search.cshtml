@@ -9,44 +9,44 @@
     <div class="container">
         <div class="row">
             <div class="title text-center wow fadeInDown">
-                <h2>بحث <span class="color">المتقدم </span></h2>
+                <h2>Advanced  <span class="color"> search</span></h2>
                 <div class="border"></div>
             </div>
             <div class="row contact-form">
                 <div class="form-group col-md-2 col-sm-6 col-xs-12">
                     <div class="text-center form-group wow fadeInDown">
-                        <input type="number" placeholder="ادخال الموديل " class="bo form-control text-right" autocomplete="off" name="model" id="model" />
+                        <input type="number" placeholder="Insert the model" class="bo form-control text-right" autocomplete="off" name="model" id="model" />
                     </div>
                 </div>
                 <div class="form-group col-md-2 col-sm-6 col-xs-12">
                     <div class="text-center form-group wow fadeInUp">
-                        <input type="text" placeholder="ادخال اسم الشركة " class="bo form-control text-right" autocomplete="off" name="company" id="company" />
+                        <input type="text" placeholder="Enter the company name " class="bo form-control text-right" autocomplete="off" name="company" id="company" />
                     </div>
                 </div>
                 <div class="form-group col-md-2 col-sm-6 col-xs-12 ">
                     <div class="text-center form-group wow fadeInDown">
-                        <input type="text" placeholder="ادخال السعر " class="bo form-control text-right" autocomplete="off" name="price" id="price" />
+                        <input type="text" placeholder="Enter the price" class="bo form-control text-right" autocomplete="off" name="price" id="price" />
                     </div>
                 </div>
                 <div class="text-center form-group col-md-2 col-sm-6 col-xs-12  wow fadeInUp">
                     <select class="bo form-control text-right" name="type_id" id="type_id">
-                        <option value="0" selected>اختيار تصنيف المنشور</option>
-                        <option value="1">سيارات أجرة</option>
-                        <option value="2">سيارات صالون</option>
-                        <option value="3">سيارات  صغيرة</option>
-                        <option value="4">سيارات الحمل</option>
-                        <option value="5">دراجات نارية</option>
-                        <option value="6">دراجات هوائية</option>
+                        <option value="0" selected>Choose a post rating</option>
+                        <option value="1">taxi cars</option>
+                        <option value="2">Saloon cars</option>
+                        <option value="3">Small cars</option>
+                        <option value="4">Carry cars</option>
+                        <option value="5">Motorcycles</option>
+                        <option value="6">bicycles</option>
                     </select>
                 </div>
                 <div class="form-group col-md-2 col-sm-6 col-xs-12">
                     <div class="text-center form-group wow fadeInDown">
-                        <input type="text" placeholder="البحث عن الاسم" class="bo form-control text-right" autocomplete="off" name="title" id="title" />
+                        <input type="text" placeholder="Search for the name" class="bo form-control text-right" autocomplete="off" name="title" id="title" />
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-6 col-xs-12">
                     <div class="text-center wow fadeInUp">
-                        <input type="submit" id="search-btn" class="btn btn-transparent" value="بحث" />
+                        <input type="submit" id="search-btn" class="btn btn-transparent" value="Search" />
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div id="postrow" class="title text-center wow fadeInDown">
-                <h2>أخر <span class="color">المنشورات</span></h2>
+                <h2>Latest<span class="color">Posts</span></h2>
                 <div class="border"></div>
             </div>
             <div id="posts" class="clearfix">
@@ -87,7 +87,7 @@
                 title: $("#title").val(),
             };
             if (object.model.trim() === "" && object.company.trim() === "" && object.price.trim() === "" && object.type_id.trim() === "0" && object.title.trim() === "") {
-                toust.warning("يرجى ادخال المعلومات للبحث عنها ");
+                toust.warning("Please enter information to search for");
                 return;
             }
             //document.getElementById('animation').style.visibility = "hidden";

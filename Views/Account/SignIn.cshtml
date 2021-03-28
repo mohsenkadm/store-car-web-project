@@ -9,46 +9,46 @@
         <div class="search-icon text-center">
             <i style="font-size:90px;" class="tf-ion-coffee"></i>
         </div>
-        <h3>تسجيل الدخول</h3>
+        <h3>sign in</h3>
         <br />
         <div id="contact-form">
             <div id="login">
                 <div class="form-group">
-                    <input type="text" placeholder="اسم المستخدم" autocomplete="off" class="form-control  text-right" name="name" id="name" />
+                    <input type="text" placeholder="user name" autocomplete="off" class="form-control  text-right" name="name" id="name" />
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="كلمة المرور" autocomplete="off" class="form-control text-right" name="pass" id="pass" />
+                    <input type="password" placeholder="password" autocomplete="off" class="form-control text-right" name="pass" id="pass" />
                 </div>
                 <div id="cf-submit">
-                    <input type="submit" id="login-btn" class="btn btn-transparent btn-animated" value="دخول" />
+                    <input type="submit" id="login-btn" class="btn btn-transparent btn-animated" value="Login" />
                 </div>
                 <div class="inline-block" style="margin-top:20px; margin-bottom:-20px;">
-                    <a style="cursor:pointer; float:left;" onclick="call_Action('Account/SignUp')">لا تمتلك حساب ؟سجل الان</a>
-                    <a style="cursor:pointer; float:right; margin-left:75px;" onclick="forgat_pass()">نسيت كلمة السر؟</a>
+                    <a style="cursor:pointer; float:left;" onclick="call_Action('Account/SignUp')">Don't have an account? Register now</a>
+                    <a style="cursor:pointer; float:right; margin-left:75px;" onclick="forgat_pass()">I forgot the password?</a>
                 </div>
             </div>
             <div id="email" style="display:none;">
                 <div class="form-group">
-                    <input type="text" placeholder="بريد الالكتروني" autocomplete="off" class="form-control" name="emailtxt" id="emailtxt" />
+                    <input type="text" placeholder="email" autocomplete="off" class="form-control" name="emailtxt" id="emailtxt" />
                 </div>
                 <div id="cf-submit">
-                    <input type="submit" id="email-btn" class="btn btn-transparent btn-animated" value="ارسال الرمز" />
+                    <input type="submit" id="email-btn" class="btn btn-transparent btn-animated" value="Send the code" />
                 </div>
             </div>
             <div id="confirm" style="display:none;">
                 <div class="form-group">
-                    <input type="text" placeholder="رمز التاكيد" autocomplete="off" class="form-control" name="code" id="code" />
+                    <input type="text" placeholder="confirmation code" autocomplete="off" class="form-control" name="code" id="code" />
                 </div>
                 <div id="cf-submit">
-                    <input type="submit" id="confirm-btn" class="btn btn-transparent btn-animated" value="تاكيد الحساب" />
+                    <input type="submit" id="confirm-btn" class="btn btn-transparent btn-animated" value="Account Confirmation" />
                 </div>
             </div>
             <div id="newpass" style="display:none;">
                 <div class="form-group">
-                    <input type="text" placeholder="كلمة المرور الجديدة" autocomplete="off" class="form-control" name="newpassword" id="newpassword" />
+                    <input type="text" placeholder="New Password" autocomplete="off" class="form-control" name="newpassword" id="newpassword" />
                 </div>
                 <div id="cf-submit">
-                    <input type="submit" id="updatepass-btn" class="btn btn-transparent btn-animated" value="تعديل كلمة المرور" />
+                    <input type="submit" id="updatepass-btn" class="btn btn-transparent btn-animated" value="Password change" />
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                 email: $("#emailtxt").val(),
             };
             if (object.pass === "" || object.pass.trim() === "") {
-                toust.warning("يرجى ادخال كلمة المرور");
+                toust.warning("Please enter a password");
                 return;
             }
             call_ajax("POST", "Account/Update_Pass", object, after_updata_pass );
@@ -74,7 +74,7 @@
                 email: $("#emailtxt").val(),
             };
             if (object.email === "" || object.email.trim() === "") {
-                toust.warning("يرجى ادخال بريد الالكتروني");
+                toust.warning("Please enter an email");
                 return;
             }
             call_ajax("POST", "Account/ForgatePassword", object, after_write_email);
@@ -87,7 +87,7 @@
                 Email: $("#emailtxt").val()
             };
             if (object.code === "" || object.code.trim() === "") {
-                toast.warning("يرجى ادخال رمز التاكيد");
+                toast.warning("Please enter a confirmation code");
                 return;
             }
             call_ajax("POST", "Account/ConfirmAccount", object, after_confirm);
@@ -103,11 +103,11 @@
                 password: $("#pass").val(),
             };
             if (object.username === "" || object.username.trim() === "") {
-                toust.warning("يرجى ادخال اسم المستخدم");
+                toust.warning("Please enter your username");
                 return;
             }
             else if (object.password === "" || object.password.trim() === "") {
-                toust.warning("يرجى ادخال كلمة المرور");
+                toust.warning("Please enter a password");
                 return;
             }
             call_ajax("POST", "Account/Login", object, after_login);

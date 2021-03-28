@@ -1,0 +1,547 @@
+E:\store car web project\bin\Release\netcoreapp3.1\appsettings.Development.json
+E:\store car web project\bin\Release\netcoreapp3.1\appsettings.json
+E:\store car web project\bin\Release\netcoreapp3.1\libman.json
+E:\store car web project\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.exe
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.deps.json
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.json
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.dev.json
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.dll
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.pdb
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.dll
+E:\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.pdb
+E:\store car web project\bin\Release\netcoreapp3.1\Dapper.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\store car web project\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\store car web project\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+E:\store car web project\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.dll
+E:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+E:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Web.Common.dll
+E:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.csprojAssemblyReference.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfoInputs.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfo.cs
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CoreCompileInputs.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cs
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cs
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.input.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.output.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorCoreGenerate.cache
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignUp.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Advanced_Search.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Index.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Notifecation.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\posts.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profile.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profileUser.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\Chat.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\ListChat.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\about.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\contact.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\counter.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\services.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\team.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_MyLayout.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Partial.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\postsview.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\usersview.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cache
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cs
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.Views.pdb
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CopyComplete
+E:\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.Manifest.cache
+E:\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.xml
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.dll
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.pdb
+E:\store car web project\obj\Release\netcoreapp3.1\store car web project.genruntimeconfig.cache
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\appsettings.Development.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\appsettings.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\libman.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Properties\launchSettings.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.exe
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.deps.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.dev.json
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.pdb
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.pdb
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Dapper.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\X.PagedList.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Web.Common.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\learn mvc\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.csprojAssemblyReference.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfoInputs.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfo.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CoreCompileInputs.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.input.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.output.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorCoreGenerate.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignUp.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Advanced_Search.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Index.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Notifecation.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\posts.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profile.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profileUser.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\Chat.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\ListChat.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\about.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\contact.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\counter.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\services.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\team.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_MyLayout.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Partial.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\postsview.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\usersview.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cs
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.Views.pdb
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CopyComplete
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.Manifest.cache
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.xml
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.dll
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.pdb
+E:\learn mvc\store car web project\obj\Release\netcoreapp3.1\store car web project.genruntimeconfig.cache
+D:\store car web project\bin\Release\netcoreapp3.1\appsettings.Development.json
+D:\store car web project\bin\Release\netcoreapp3.1\appsettings.json
+D:\store car web project\bin\Release\netcoreapp3.1\libman.json
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.exe
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.deps.json
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.json
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.runtimeconfig.dev.json
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.dll
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.pdb
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.dll
+D:\store car web project\bin\Release\netcoreapp3.1\store car web project.Views.pdb
+D:\store car web project\bin\Release\netcoreapp3.1\Dapper.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\store car web project\bin\Release\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+D:\store car web project\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\store car web project\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Collections.Immutable.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Composition.Runtime.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Composition.TypedParts.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Runtime.Caching.dll
+D:\store car web project\bin\Release\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.dll
+D:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Mvc.Core.dll
+D:\store car web project\bin\Release\netcoreapp3.1\X.PagedList.Web.Common.dll
+D:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\store car web project\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.csprojAssemblyReference.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfoInputs.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.AssemblyInfo.cs
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CoreCompileInputs.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cs
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.MvcApplicationPartsAssemblyInfo.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorAssemblyInfo.cs
+D:\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.Manifest.cache
+D:\store car web project\obj\Release\netcoreapp3.1\staticwebassets\store car web project.StaticWebAssets.xml
+D:\store car web project\obj\Release\netcoreapp3.1\scopedcss\bundle\store car web project.styles.css
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.input.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.TagHelpers.output.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorCoreGenerate.cache
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Account\SignUp.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Advanced_Search.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Index.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Notifecation.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\posts.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profile.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\profileUser.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\Chat.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Chat\ListChat.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\about.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\contact.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\counter.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\services.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Home\team.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_MyLayout.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_Partial.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\postsview.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Usercontrol\usersview.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cache
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.RazorTargetAssemblyInfo.cs
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.Views.pdb
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.csproj.CopyComplete
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.dll
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.pdb
+D:\store car web project\obj\Release\netcoreapp3.1\store car web project.genruntimeconfig.cache
+D:\store car web project\obj\Release\netcoreapp3.1\Razor\Views\Blogs\Update_posts.cshtml.g.cs
