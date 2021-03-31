@@ -390,3 +390,9 @@ The SMTP server requires a secure connection or the client was not authenticated
 
 ------------------------------------
 
+ ChatController => GetMessage	3/31/2021 3:06:25 PM
+
+Index and count must refer to a location within the string. (Parameter 'count')
+
+------------------------------------
+
